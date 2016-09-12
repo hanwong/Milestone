@@ -1,4 +1,4 @@
-# 초기 세팅 방법
+# Milestone 
 
 ### 1. 페이지 이름 수정
 * `pages.ejs` - 섹션 별 id, class 이름 수정
