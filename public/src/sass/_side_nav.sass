@@ -1,0 +1,51 @@
+.side-nav
+  display: none
+  cursor: default
+  transition: all 0.3s ease
+  position: fixed
+  z-index: 999
+  top: 50%
+  right: 0
+  margin-right: 3%
+  text-align: right
+
+  &.fade-in
+    display: block
+
+  li 
+    list-style-type: none
+    padding: 5px
+    margin: 1px
+
+  a
+    margin-left: 10px
+    margin-right: 10px
+    color: #000
+    text-decoration: none
+    span
+      opacity: 0
+
+  a::after
+    content: ''
+    display: inline-block
+    width: 7px
+    height: 7px
+    margin-left: 10px
+    border-radius: 50%
+    background-color: #000
+
+  .active, li:hover 
+    list-style-type: none
+    padding: 5px
+    margin: 1px
+    border-radius: 20px
+    background-color: #fff
+    transition: background-color 0.3s ease
+
+  .active a::after, li:hover a::after
+    background-color: #B3B3B3
+    transition: all 0.3s ease
+
+  .active span, li:hover span,
+    opacity: 1
+    transition: all 0.3s ease
