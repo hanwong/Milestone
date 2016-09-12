@@ -263,11 +263,11 @@ table {
   border-spacing: 0;
 }
 
-.page01, .page02, .page03, .page04, .page05 {
+.testimonials, .features, .projects, .pricing, .about-us, .contacts {
   position: relative;
 }
 
-.page01, .page02, .page03, .page04, .page05, .home {
+.testimonials, .features, .projects, .pricing, .about-us, .contacts, .home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,24 +283,28 @@ table {
   background: #3666E1;
 }
 
-.page01 {
+.testimonials {
   background: #66CCFF;
 }
 
-.page02 {
+.features {
   background: #FFCC66;
 }
 
-.page03 {
+.projects {
   background: #CC66FF;
 }
 
-.page04 {
+.pricing {
   background: #FF6666;
 }
 
-.page05 {
+.about-us {
   background: #6666FF;
+}
+
+.contacts {
+  background: #FF8000;
 }
 
 .gnb-nav {
@@ -444,29 +448,29 @@ table {
   flex: 1 0 50%;
 }
 
-.page01 {
+.testimonials {
   position: relative;
 }
 
-.page01 .prev {
+.testimonials .prev {
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-150px, 0);
 }
 
-.page01 .next {
+.testimonials .next {
   position: absolute;
   top: 35%;
   right: 50%;
   transform: translate(150px, 0);
 }
 
-.page01 .people-carousel li {
+.testimonials .people-carousel li {
   display: none;
 }
 
-.page01 .people-carousel li.current, .page01 .people-carousel li.standby-left, .page01 .people-carousel li.standby-right {
+.testimonials .people-carousel li.current, .testimonials .people-carousel li.standby-left, .testimonials .people-carousel li.standby-right {
   float: left;
   margin-right: -100%;
   display: flex;
@@ -476,61 +480,61 @@ table {
   width: 300px;
 }
 
-.page01 .people-carousel li.current .item-name, .page01 .people-carousel li.standby-left .item-name, .page01 .people-carousel li.standby-right .item-name {
+.testimonials .people-carousel li.current .item-name, .testimonials .people-carousel li.standby-left .item-name, .testimonials .people-carousel li.standby-right .item-name {
   font-size: 30px;
 }
 
-.page01 .people-carousel li.current .item-description, .page01 .people-carousel li.standby-left .item-description, .page01 .people-carousel li.standby-right .item-description {
+.testimonials .people-carousel li.current .item-description, .testimonials .people-carousel li.standby-left .item-description, .testimonials .people-carousel li.standby-right .item-description {
   font-size: 14px;
 }
 
-.page01 .people-carousel li.current .item-role, .page01 .people-carousel li.standby-left .item-role, .page01 .people-carousel li.standby-right .item-role {
+.testimonials .people-carousel li.current .item-role, .testimonials .people-carousel li.standby-left .item-role, .testimonials .people-carousel li.standby-right .item-role {
   font-size: 14px;
 }
 
-.page01 .people-carousel li.current {
+.testimonials .people-carousel li.current {
   margin-left: 33.333%;
 }
 
-.page01 .people-carousel li.current .item-description {
+.testimonials .people-carousel li.current .item-description {
   display: block;
 }
 
-.page01 .people-carousel li.standby-left {
+.testimonials .people-carousel li.standby-left {
   margin-left: 0%;
   transform: scale(0.8);
 }
 
-.page01 .people-carousel li.standby-left .item-description {
+.testimonials .people-carousel li.standby-left .item-description {
   display: none;
 }
 
-.page01 .people-carousel li.standby-right {
+.testimonials .people-carousel li.standby-right {
   margin-left: 66.666%;
   transform: scale(0.8);
 }
 
-.page01 .people-carousel li.standby-right .item-description {
+.testimonials .people-carousel li.standby-right .item-description {
   display: none;
 }
 
-.page02 {
+.features {
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.page02 .filter-btns {
+.features .filter-btns {
   display: flex;
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 10px;
 }
 
-.page02 .filter-btns button {
+.features .filter-btns button {
   font-size: 30px;
 }
 
-.page02 .element-item {
+.features .element-item {
   position: relative;
   float: left;
   width: 150px;
@@ -541,7 +545,7 @@ table {
   perspective: 600px;
 }
 
-.page02 .element-item .card {
+.features .element-item .card {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -549,7 +553,7 @@ table {
   transition: transform 1s;
 }
 
-.page02 .element-item .card span {
+.features .element-item .card span {
   margin: 0;
   display: block;
   position: absolute;
@@ -558,17 +562,17 @@ table {
   backface-visibility: hidden;
 }
 
-.page02 .element-item .card .front {
+.features .element-item .card .front {
   background: #B3B3B3;
 }
 
-.page02 .element-item .card .back {
+.features .element-item .card .back {
   color: #000;
   background: #FFFFFF;
   transform: rotateY(180deg);
 }
 
-.page02 .element-item .card:hover {
+.features .element-item .card:hover {
   transform: rotateY(180deg);
 }
 

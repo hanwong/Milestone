@@ -22,12 +22,13 @@
   var ctrl = new ScrollMagic.Controller({
     'addIndicators': false
   });
-  var gnb_scene = '.gnb-page01, .gnb-page02, .gnb-page03, .gnb-page04, .gnb-page05'.split(', ');
+  var gnb_scene = '.gnb-page01, .gnb-page02, .gnb-page03, .gnb-page04, .gnb-page05, .gnb-page06'.split(', ');
+  var page_names = '.testimonials, .features, .projects, .pricing, .about-us, .contacts'.split(', ');
   gnb_scene.forEach(function (selector, idx) {
     var scroll_scene = new ScrollMagic.Scene({
-          'triggerElement': `.page0${idx+1}`,
+          'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
-          'duration': $(`.page0${idx+1}`).height()
+          'duration': $(`${page_names[idx]}`).height()
           // 'reverse': false
       })
       .setClassToggle(selector, 'active')
@@ -42,10 +43,10 @@
     $this.parent().radioClass('active');
   });
 
-  var tm = new TweenMax.fromTo('.side-nav', 0.3, { 'opacity': 0 }, { 'opacity': 1 });
   // side navigation 영역 ScrollMagic 추가
+  var tm = new TweenMax.fromTo('.side-nav', 0.3, { 'opacity': 0 }, { 'opacity': 1 });
   var scroll_scene = new ScrollMagic.Scene({
-        'triggerElement': '.page01',
+        'triggerElement': '.testimonials',
         'triggerHook': 0.5,
         // 'duration': $(document).height()
         // 'reverse': false
@@ -54,12 +55,12 @@
     .addTo(ctrl)
     .setTween(tm);
 
-  var side_scene = '.side-page01, .side-page02, .side-page03, .side-page04, .side-page05'.split(', ');
+  var side_scene = '.side-page01, .side-page02, .side-page03, .side-page04, .side-page05, .side-page06'.split(', ');
   side_scene.forEach(function (selector, idx) {
     var scroll_scene = new ScrollMagic.Scene({
-          'triggerElement': `.page0${idx+1}`,
+          'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
-          'duration': $(`.page0${idx+1}`).height()
+          'duration': $(`${page_names[idx]}`).height()
           // 'reverse': false
       })
       .setClassToggle(selector, 'active')

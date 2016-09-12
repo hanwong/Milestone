@@ -70,8 +70,7 @@
  * @return {this}
  */
   var xhr = new XMLHttpRequest;
-  var views = 'page01 page02 page03 page04 page05'.split(' ');
-
+  var views = 'testimonials, features, projects, pricing, about-us, contacts'.split(', ');
   function viewUpdate (index) {
     var page;
     if ( typeof(index) === 'number' ) {
