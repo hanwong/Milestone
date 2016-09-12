@@ -9,21 +9,14 @@
           'class': 'mobile',
           'name': 'mobile app',
           'description': ' The sight of the tumblers restored Bob Sawyer to a degree of equanimity which he had not possessed since his interview with his landlady.',
-          'img': 'http://placehold.it/320x200/800000/fff/?text=mobile'
+          'img': '/public/src/img/iphone-mockup.png'
         },
         {
           'class': 'watch',
           'name': 'watch app',
           'description': ' The sight of the tumblers restored Bob Sawyer to a degree of equanimity which he had not possessed since his interview with his landlady.',
-          'img': 'http://placehold.it/320x200/804000/fff/?text=watch'
-        },
-        {
-          'class': 'tablet',
-          'name': 'tablet app',
-          'description': ' The sight of the tumblers restored Bob Sawyer to a degree of equanimity which he had not possessed since his interview with his landlady.',
-          'img': 'http://placehold.it/320x200/808000/fff/?text=tablet'
+          'img': '/public/src/img/iwatch-mockup.png'
         }
-        
       ];
 
       var $home = $('.home'),

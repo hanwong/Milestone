@@ -6,14 +6,20 @@
           data-ng-class="{'active': home.isSelected( '{{item.class}}' )}" 
           data-ng-repeat="item in home.contents">
          <div class="text-items">
-           <div class="item-name">{{item.name}}</div>
+           <div class="item-name">milestone {{item.name}}</div>
            <div class="item-description">{{item.description}}</div>
+           <a class="item-link" href="#"><p class="apple">&#63743;</p> <p> app store </p></a>
          </div>
          <div class="item-img"><img data-ng-src="{{item.img}}" alt="{{item.name}}"></div>
        </li>
      </ul>
-     <button type="button" class="prev" data-ng-click="home.prevItem()">&lt;</button>
-     <button type="button" class="next" data-ng-click="home.nextItem()">&gt;</button>
+     <div class="indicator">
+      <button type="button" class="indicator-{{item.class}}"  data-ng-class="{'active': home.isSelected( '{{item.class}}' )}"  data-ng-repeat="item in home.contents"></button>
+    </div>
+     <div class="arrow-btns">
+       <button type="button" class="prev" data-ng-click="home.prevItem()"></button>
+       <button type="button" class="next" data-ng-click="home.nextItem()"></button>
+     </div>
   </section>
 
   <section class="testimonials" id="testimonials" data-ng-controller="peopleCtrl as people">

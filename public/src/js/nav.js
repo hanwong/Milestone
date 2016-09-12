@@ -22,10 +22,20 @@
   var ctrl = new ScrollMagic.Controller({
     'addIndicators': false
   });
+
+  var scroll_scene = new ScrollMagic.Scene({
+      'triggerElement': '.home-carousel',
+      'triggerHook': 0.1,
+      // 'duration': $(document).height()
+      // 'reverse': false
+  })
+  .setClassToggle('.gnb-nav', 'scrolled')
+  .addTo(ctrl);
+
   var gnb_scene = '.gnb-page01, .gnb-page02, .gnb-page03, .gnb-page04, .gnb-page05, .gnb-page06'.split(', ');
   var page_names = '.testimonials, .features, .projects, .pricing, .about-us, .contacts'.split(', ');
   gnb_scene.forEach(function (selector, idx) {
-    var scroll_scene = new ScrollMagic.Scene({
+    var gnb_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
           'duration': $(`${page_names[idx]}`).height()
@@ -45,7 +55,7 @@
 
   // side navigation 영역 ScrollMagic 추가
   var tm = new TweenMax.fromTo('.side-nav', 0.3, { 'opacity': 0 }, { 'opacity': 1 });
-  var scroll_scene = new ScrollMagic.Scene({
+  var side_nav_scene = new ScrollMagic.Scene({
         'triggerElement': '.testimonials',
         'triggerHook': 0.5,
         // 'duration': $(document).height()
@@ -57,7 +67,7 @@
 
   var side_scene = '.side-page01, .side-page02, .side-page03, .side-page04, .side-page05, .side-page06'.split(', ');
   side_scene.forEach(function (selector, idx) {
-    var scroll_scene = new ScrollMagic.Scene({
+    var side_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
           'duration': $(`${page_names[idx]}`).height()

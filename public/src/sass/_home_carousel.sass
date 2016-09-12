@@ -1,0 +1,157 @@
+.home
+  position: relative
+  padding-bottom: 80px
+
+  .arrow-btns button
+    position: absolute
+    top: 50%
+    width: 0
+    height: 0
+    border-top: 14px solid transparent
+    border-bottom: 14px solid transparent
+  .prev
+    left: 5%
+    border-right: 22px solid rgba(255, 255, 255, 0.2)
+    &:hover
+      border-right: 22px solid rgba(255, 255, 255, 0.55)
+  .next
+    right: 5%
+    border-left: 22px solid rgba(255, 255, 255, 0.2)
+    &:hover
+      border-left: 22px solid rgba(255, 255, 255, 0.55)
+
+
+  .indicator
+    position: absolute
+    bottom: 50px
+    left: 50%
+    transform: translate(-50%)
+    margin-top: 50px
+  .indicator button
+    margin-right: 10px
+    width: 25px
+    height: 0
+    border-top: 1px solid #fff
+    &.active
+      border-top: 1px solid $basic-color
+      
+      
+
+  .home-carousel
+    display: flex
+    flex-basis: 80%
+    height: 100%
+    .mobile
+      img
+        width: 550px
+    .watch
+      img
+        width: 360px
+
+    li
+      display: none
+      &.active
+        display: flex
+      
+      .item-img
+        +flex-align-center(v)
+        margin-bottom: 30px
+        height: 70vh
+      
+      .text-items
+        +flex-align-center(both, column wrap)
+        padding-left: 5%
+        padding-right: 5%
+        .item-name, .item-link
+          font-family: $mont
+          text-transform: uppercase
+        .item-name
+          margin-bottom: 20px
+          font-size: 45px
+          font-weight: 900
+          line-height: 45px
+        .item-description
+          margin-bottom: 20px
+          font-family: $open-sans
+          font-size: 13px
+          line-height: 24px
+          color: $gray
+        .item-link
+          align-self: flex-start
+          flex: 0
+          +flex-align-center(v)
+          font-size: 12px
+          padding: 25px 32px 25px
+          letter-spacing: 0.2em
+          color: #fff
+          text-decoration: none
+          border-radius: 30px
+          border: 2px solid $basic-color
+          .apple
+            font-size: 22px
+            margin-right: 10px
+          &:hover
+            background-color: $basic-color
+
+.lg
+  .text-items
+    position: relative
+    .item-name, .item-description
+      // position: absolute
+      z-index: 100
+    .item-name
+      width: 314px
+
+.md
+  .home
+    padding-bottom: 120px
+    .home-carousel
+      .mobile
+        img
+          width: 500px
+      .watch
+        img
+          width: 306px
+
+.xs
+  .home
+    padding-bottom: 80px
+    .indicator
+      bottom: 30px
+    .home-carousel
+      .item-img
+        height: 55vh
+
+      .mobile
+        img
+          width: 435px
+      .watch
+        img
+          width: 209px
+      .text-items
+          .item-name
+            text-align: center
+
+.md, .xs
+  .home
+    .home-carousel
+      li.active
+        +flex-align-center(both, column wrap)
+        .item-img
+          order: -1
+        .text-items
+          .item-name
+            margin-bottom: 10px
+            font-size: 35px
+            line-height: 1
+          .item-description
+            width: 80%
+            line-height: 1.7
+            text-align: center
+          .item-link
+            align-self: center
+            font-size: 10px
+            padding: 10px 22px 9px
+            border-radius: 30px
+            .apple
+              font-size: 20px
