@@ -1,15 +1,31 @@
 .testimonials
-  position: relative
-  .prev
+  .testimonials-title
+    font-family: $mont
+    font-size: 30px
+    color: $font-black
+  .testimonials-desc
+    font-family: $open-sans
+    font-size: 14px
+    color: $gray
+  .prev, .next
     position: absolute
-    top: 35%
+    top: 50%
+    width: 11px
+    height: 19px
+    cursor: pointer
+  .prev
     left: 50%
     transform: translate(-150px, 0)
+    background-image: url("/public/src/img/left-normal.png")
+    &:hover
+      background-image: url("/public/src/img/left-hover.png")
   .next
-    position: absolute
-    top: 35%
     right: 50%
     transform: translate(150px, 0)
+    background-image: url("/public/src/img/right-normal.png")
+    &:hover
+      background-image: url("/public/src/img/right-hover.png")
+
   .people-carousel
     li
       display: none

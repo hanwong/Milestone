@@ -2,9 +2,7 @@
   position: relative
 
 .testimonials, .features, .projects, .pricing, .about-us, .contacts, .home
-  display: flex
-  justify-content: center
-  align-items: center
+  +flex-align-center(both, row wrap)
   min-height: 90vh
   width: 100%
   font-size: 40px
@@ -16,7 +14,9 @@
   background: $black
 
 .testimonials
-  background: #66CCFF
+  flex-flow: column
+  background: #fff
+  color: #000
 
 .features
   background: #FFCC66

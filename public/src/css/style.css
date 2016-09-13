@@ -6,6 +6,7 @@
 
 .testimonials, .features, .projects, .pricing, .about-us, .contacts, .home {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   min-height: 90vh;
@@ -21,7 +22,9 @@
 }
 
 .testimonials {
-  background: #66CCFF;
+  flex-flow: column;
+  background: #fff;
+  color: #000;
 }
 
 .features {
@@ -102,6 +105,7 @@
 .gnb-nav.scrolled {
   height: 102px;
   background-color: #fff;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.12);
 }
 
 .gnb-nav.scrolled .active a, .gnb-nav.scrolled div:hover a {
@@ -289,7 +293,10 @@
 .side-nav a {
   margin-left: 10px;
   margin-right: 10px;
-  color: #000;
+  font-family: "Open Sans";
+  font-size: 12px;
+  color: #2b2b2b;
+  text-transform: capitalize;
   text-decoration: none;
 }
 
@@ -304,7 +311,7 @@
   height: 7px;
   margin-left: 10px;
   border-radius: 50%;
-  background-color: #000;
+  background-color: #cacaca;
 }
 
 .side-nav .active, .side-nav li:hover {
@@ -312,12 +319,12 @@
   padding: 5px;
   margin: 1px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #ededed;
   transition: background-color 0.3s ease;
 }
 
 .side-nav .active a::after, .side-nav li:hover a::after {
-  background-color: #B3B3B3;
+  background-color: #ac9455;
   transition: all 0.3s ease;
 }
 
@@ -436,7 +443,7 @@
 
 .home .home-carousel li .text-items .item-description {
   margin-bottom: 20px;
-  font-family: "OpenSans";
+  font-family: "Open Sans";
   font-size: 13px;
   line-height: 24px;
   color: #a3a3a3;
@@ -536,22 +543,44 @@
   font-size: 20px;
 }
 
-.testimonials {
-  position: relative;
+.testimonials .testimonials-title {
+  font-family: "Montserrat";
+  font-size: 30px;
+  color: #2b2b2b;
+}
+
+.testimonials .testimonials-desc {
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #a3a3a3;
+}
+
+.testimonials .prev, .testimonials .next {
+  position: absolute;
+  top: 50%;
+  width: 11px;
+  height: 19px;
+  cursor: pointer;
 }
 
 .testimonials .prev {
-  position: absolute;
-  top: 35%;
   left: 50%;
   transform: translate(-150px, 0);
+  background-image: url("/public/src/img/left-normal.png");
+}
+
+.testimonials .prev:hover {
+  background-image: url("/public/src/img/left-hover.png");
 }
 
 .testimonials .next {
-  position: absolute;
-  top: 35%;
   right: 50%;
   transform: translate(150px, 0);
+  background-image: url("/public/src/img/right-normal.png");
+}
+
+.testimonials .next:hover {
+  background-image: url("/public/src/img/right-hover.png");
 }
 
 .testimonials .people-carousel li {

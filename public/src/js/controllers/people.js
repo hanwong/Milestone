@@ -6,44 +6,37 @@
 
       this.contents = [
         {
-          'class': 'brian01',
+          'class': 'brian',
           'name': 'Brian Williamson',
           'role': 'PM . Jetlinks',
           'description': ' This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself.',
-          'img': 'http://placehold.it/200x200/FF6666/fff/?text=brian01'
+          'img': '/public/src/img/brian.png'
         },
         {
-          'class': 'brian02',
-          'name': 'Brian Williamson',
-          'role': 'PM . Jetlinks',
+          'class': 'helen',
+          'name': 'Helen French',
+          'role': 'PM . Coginix.co',
           'description': ' This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself.',
-          'img': 'http://placehold.it/200x200/FFCC66/fff/?text=brian02'
+          'img': '/public/src/img/helen.png'
         },
         {
-          'class': 'brian03',
-          'name': 'Brian Williamson',
-          'role': 'PM . Jetlinks',
+          'class': 'john',
+          'name': 'John Doe',
+          'role': 'PM .  Google',
           'description': ' This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself.',
-          'img': 'http://placehold.it/200x200/FFFF66/fff/?text=brian03'
+          'img': '/public/src/img/john.png'
         },
         {
-          'class': 'brian04',
-          'name': 'Brian Williamson',
-          'role': 'PM . Jetlinks',
+          'class': 'connor',
+          'name': 'Mildred O’Connor',
+          'role': 'PM . eabox',
           'description': ' This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself.',
-          'img': 'http://placehold.it/200x200/CCFF66/fff/?text=brian04'
-        },
-        {
-          'class': 'brian05',
-          'name': 'Brian Williamson',
-          'role': 'PM . Jetlinks',
-          'description': ' This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself.',
-          'img': 'http://placehold.it/200x200/66FF66/fff/?text=brian05'
+          'img': '/public/src/img/connor.png'
         }
         
       ];
 
-      var $people = $('.page01'),
+      var $people = $('.testimonials'),
         $prevButton = $people.find('.prev'),
         $nextButton = $people.find('.next');
 
@@ -85,18 +78,7 @@
   })
     .animation('.people-animation', function () {
       return {
-        'addClass': function (element, className, done) {
-          // console.log('people_addClass: ', className);
-          // console.log('people_addClass: ', arguments);
-
-        },
-        'removeClass': function (element, className, done) {
-          // console.log('people_removeClass: ', className);
-
-        },
         'setClass': function(element, addedClass, removedClass, done) {
-          // console.log('people_addedClass: ', addedClass, 'people_removedClass: ',removedClass);
-          
           // next버튼 클릭시
           if ( addedClass === 'standby-left' && removedClass === 'current' ) {
 
@@ -123,10 +105,7 @@
 
           // prev버튼 클릭시
           if ( addedClass === 'current' && removedClass === 'standby-left' ) {
-            // console.log('000', element.prev()[0]); // 이동전 current class, 마지막 체크
-            // console.log('111', element[0]); // 이동전 current class
-            // console.log('222', element.next()[0]); // 이동전 current class, 맨처음에 체크 할것
-            
+
             if (!element.next()[0]) {
               TweenMax.fromTo(element.prev(), 0.5, { x: -300, scale: 1 }, { x: 0, scale: 0.8, onComplete: done });
               TweenMax.fromTo(element, 0.5, { x: -300, scale: 0.8 }, { x: 0, scale: 1, onComplete: done });
@@ -146,10 +125,6 @@
             TweenMax.fromTo(element.find('.item-text'), 0.5, { y: -100 }, { y: 0, onComplete: done });
 
           }
-          // if ( addedClass === 'standby-right' && removedClass === 'current' ) {
-          //   console.log('이동전 current class', element); // 이동전 current class
-          //   people_tl.fromTo(element, 1, { right: -50 }, { right: 50, onComplete: done });
-          // }
         }
     };
   });
