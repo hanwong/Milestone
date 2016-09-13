@@ -44,11 +44,21 @@
  * @param  {this} event
  * @return {this}
  */
-  var $nav = $('.gnb-nav'), 
-  nav_height = $nav.height();
+
 
   function gotoPages(event) {
     // console.log(arguments);
+    var nav_height = 0; 
+    if ( $root.hasClass('wide') || $root.hasClass('lg') || $root.hasClass('md') ) {
+      nav_height = 102;
+    } 
+    else {
+      nav_height = 70;
+      if($nav_header.hasClass('is-open')) {
+        menuToggle();
+      }
+    }
+
     event.preventDefault();
     // console.log( '객체 생성 전:', $.data(this, '$this') );
     var id     = $.$(this).attr('href'),
@@ -92,8 +102,34 @@
     // return false;
   }
 
+  /**
+   * meneToggle
+   * ---------------------------------------------
+   * @작성자    hanwong
+   * @버전     0.0.1
+   * @param  {this} 
+   * @return {this}
+   */
+  var $root          = $('html'),
+    $nav_header    = $('.gnb-nav'),
+    $navicon       = $('[data-navicon="button"]');
+
+  function menuToggle() {
+    console.log('checked??');
+    if($nav_header.hasClass('is-open')) {
+      $root.removeClass('pinned');
+      $nav_header.removeClass('is-open');
+      $navicon.removeClass('is--closed');
+    } else {
+      $root.addClass('pinned');
+      $nav_header.addClass('is-open');
+      $navicon.addClass('is--closed')
+    }
+  }
+
   global.changeDeviceMode = changeDeviceMode;
   global.gotoPages = gotoPages;
   global.viewUpdate = viewUpdate;
+  global.menuToggle = menuToggle;
   
 })(this, this.jQuery);

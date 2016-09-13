@@ -78,5 +78,8 @@
   });
 
 
+  var eventType = ((document.ontouchstart !== null) ? 'click' : 'touchstart');
+  var $navicon = $('[data-navicon="button"]');
+  $navicon.on(eventType, menuToggle);
 
 })(this, this.jQuery);

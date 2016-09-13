@@ -46,7 +46,7 @@
 
 .gnb-nav {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   position: fixed;
   z-index: 1000;
@@ -71,7 +71,7 @@
 }
 
 .gnb-nav .gnb-home {
-  margin: 35px;
+  margin-left: 35px;
 }
 
 .gnb-nav .gnb-nav-list {
@@ -79,6 +79,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .gnb-nav .gnb-nav-list .active a {
@@ -107,8 +108,160 @@
   color: #141414;
 }
 
+.gnb-nav .navicon {
+  display: none;
+  padding: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.gnb-nav .navicon__lines {
+  display: inline-block;
+  width: 15px;
+  height: 1px;
+  background: #ac9455;
+  border-radius: 1px;
+  transition: .3s ease;
+  position: relative;
+}
+
+.gnb-nav .navicon__lines:before, .gnb-nav .navicon__lines:after {
+  display: inline-block;
+  width: 15px;
+  height: 1px;
+  background: #ac9455;
+  border-radius: 1px;
+  transition: .3s ease;
+  position: absolute;
+  left: 0;
+  content: '';
+  transform-origin: 2px center;
+}
+
+.gnb-nav .navicon__lines:before {
+  top: 5px;
+}
+
+.gnb-nav .navicon__lines:after {
+  top: -5px;
+}
+
+.is--closed .gnb-nav .navicon__lines {
+  transform: scale3d(0.8, 0.8, 0.8);
+}
+
+.gnb-nav .navicon-x.is--closed .navicon__lines {
+  background: transparent;
+}
+
+.gnb-nav .navicon-x.is--closed .navicon__lines:before, .gnb-nav .navicon-x.is--closed .navicon__lines:after {
+  background: #fff;
+  transform-origin: 50% 50%;
+  top: 0;
+  width: 15px;
+}
+
+.gnb-nav .navicon-x.is--closed .navicon__lines:before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.gnb-nav .navicon-x.is--closed .navicon__lines:after {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
 .lg .gnb-nav-list {
   justify-content: space-around;
+}
+
+.md .gnb-nav, .xs .gnb-nav {
+  height: 104px;
+  justify-content: space-between;
+}
+
+.md .gnb-nav .gnb-nav-list, .xs .gnb-nav .gnb-nav-list {
+  display: none;
+}
+
+.md .gnb-nav .navicon, .xs .gnb-nav .navicon {
+  display: inline-block;
+}
+
+.md .gnb-nav.is-open {
+  background: #010101;
+}
+
+.md .gnb-nav.is-open .gnb-home {
+  display: none;
+}
+
+.md .gnb-nav.is-open .gnb-nav-list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.md .gnb-nav.is-open .gnb-nav-list .active a, .md .gnb-nav.is-open .gnb-nav-list div:hover a {
+  color: #fff;
+}
+
+.md .gnb-nav.is-open .gnb-nav-list [class*="gnb-page"] {
+  margin-left: 28px;
+  font-size: 10px;
+}
+
+.xs .gnb-nav {
+  height: 70px;
+  padding-right: 0;
+  transition: all 0.3s ease;
+}
+
+.xs .gnb-nav .gnb-home {
+  margin-left: 0;
+}
+
+.xs .gnb-nav .gnb-home img {
+  width: 90px;
+}
+
+.xs .gnb-nav::before {
+  content: '';
+  width: 45px;
+}
+
+.xs .gnb-nav [data-navicon="button"] {
+  padding-right: 20px;
+}
+
+.xs .gnb-nav.is-open {
+  background: rgba(20, 20, 20, 0.95);
+  height: auto;
+}
+
+.xs .gnb-nav.is-open .gnb-home {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 70px;
+}
+
+.xs .gnb-nav.is-open .gnb-nav-list {
+  order: 4;
+  flex-basis: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.xs .gnb-nav.is-open .gnb-nav-list .active a, .xs .gnb-nav.is-open .gnb-nav-list div:hover a {
+  color: #fff;
+  border: none;
+}
+
+.xs .gnb-nav.is-open .gnb-nav-list [class*="gnb-page"] {
+  margin-bottom: 20px;
+  margin-left: 0;
+  font-size: 12px;
 }
 
 .side-nav {
@@ -171,6 +324,10 @@
 .side-nav .active span, .side-nav li:hover span {
   opacity: 1;
   transition: all 0.3s ease;
+}
+
+.xs .side-nav, .md .side-nav {
+  display: none;
 }
 
 .home {
@@ -247,8 +404,10 @@
 }
 
 .home .home-carousel li .item-img {
+  flex: 1 0 50%;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
   height: 70vh;
@@ -305,18 +464,6 @@
 
 .home .home-carousel li .text-items .item-link:hover {
   background-color: #ac9455;
-}
-
-.lg .text-items {
-  position: relative;
-}
-
-.lg .text-items .item-name, .lg .text-items .item-description {
-  z-index: 100;
-}
-
-.lg .text-items .item-name {
-  width: 314px;
 }
 
 .md .home {

@@ -1,5 +1,5 @@
 .gnb-nav
-  +flex-align-center(v)
+  +flex-align-center(v, row wrap)
   position: fixed
   z-index: 1000
   padding-right: 35px
@@ -16,12 +16,13 @@
       text-decoration: none
       color: $basic-color
   .gnb-home
-    margin: 35px
+    margin-left: 35px
   .gnb-nav-list
     flex: 1
     display: flex
     justify-content: flex-end
     align-items: center
+    transition: all 0.3s ease
     .active a
       border-bottom: 2px solid $basic-color
     .active a, div:hover a
@@ -33,7 +34,6 @@
       font-weight: 400
       letter-spacing: 0.2em
       text-transform: uppercase
-      text-align: 
   
   &.scrolled
     height: 102px
@@ -41,9 +41,102 @@
     .active a, div:hover a
       color: $black
 
+  .navicon 
+    display: none
+    padding: 10px
+    transition: 0.3s ease
+    cursor: pointer
+  .navicon__lines 
+    +navicon_lines
+    position: relative
+    &:before, &:after 
+      +navicon_lines
+      position: absolute
+      left: 0
+      content: ''
+      transform-origin: 2px center
+    &:before  
+      top: 5px
+    &:after  
+      top: -5px
+    .is--closed &
+      transform: scale3d(.8,.8,.8)
+
+  .navicon-x
+    &.is--closed
+      .navicon__lines
+        background: transparent
+        &:before,
+        &:after
+          background: #fff
+          transform-origin: 50% 50%
+          top: 0
+          width: 15px
+        &:before 
+          transform: rotate3d(0, 0, 1, 45deg) 
+        &:after 
+          transform: rotate3d(0, 0, 1, -45deg) 
+
 
 .lg
   .gnb-nav-list
     justify-content: space-around
   
+.md, .xs
+  .gnb-nav
+    height: 104px
+    justify-content: space-between
+    .gnb-nav-list
+      display: none
+    .navicon 
+      display: inline-block
 
+.md
+  .gnb-nav
+    &.is-open
+      background: $nav-black
+      .gnb-home
+        display: none
+      .gnb-nav-list
+        display: flex
+        justify-content: flex-start
+        .active a, div:hover a
+          color: #fff
+        [class*="gnb-page"]
+          margin-left: 28px
+          font-size: 10px
+
+.xs
+  .gnb-nav
+    height: 70px
+    padding-right: 0
+    transition: all 0.3s ease
+    .gnb-home
+      margin-left: 0
+    .gnb-home img
+      width: 90px
+    &::before
+      content: ''
+      width: 45px
+    [data-navicon="button"]
+      padding-right: 20px
+
+    &.is-open
+      background: $xs-nav-black
+      height: auto
+      .gnb-home
+        +flex-align-center(v)
+        height: 70px
+      .gnb-nav-list
+        order: 4
+        flex-basis: 100%
+        padding-top: 10px
+        padding-bottom: 20px
+        +flex-align-center(v, column wrap)
+        .active a, div:hover a
+          color: #fff
+          border: none
+        [class*="gnb-page"]
+          margin-bottom: 20px
+          margin-left: 0
+          font-size: 12px

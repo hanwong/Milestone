@@ -2,6 +2,8 @@
 $basic-color: #ac9455
 $black: #141414
 $gray: #a3a3a3
+$nav-black: #010101
+$xs-nav-black: rgba(20, 20, 20, 0.95)
 
 // Font
 @import url(https://fonts.googleapis.com/css?family=Open+Sans)
@@ -9,3 +11,12 @@ $gray: #a3a3a3
 
 $open-sans: "OpenSans"
 $mont: "Montserrat"
+
+// nav icon
+@mixin navicon_lines
+  display: inline-block
+  width: 15px
+  height: 1px
+  background: $basic-color
+  border-radius: 1px
+  transition: .3s ease

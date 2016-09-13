@@ -13,7 +13,7 @@
         },
         {
           'class': 'watch',
-          'name': 'watch app',
+          'name': 'iwatch app',
           'description': ' The sight of the tumblers restored Bob Sawyer to a degree of equanimity which he had not possessed since his interview with his landlady.',
           'img': '/public/src/img/iwatch-mockup.png'
         }

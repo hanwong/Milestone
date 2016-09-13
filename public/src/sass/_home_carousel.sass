@@ -54,7 +54,8 @@
         display: flex
       
       .item-img
-        +flex-align-center(v)
+        flex: 1 0 50%
+        +flex-align-center
         margin-bottom: 30px
         height: 70vh
       
@@ -93,14 +94,7 @@
           &:hover
             background-color: $basic-color
 
-.lg
-  .text-items
-    position: relative
-    .item-name, .item-description
-      // position: absolute
-      z-index: 100
-    .item-name
-      width: 314px
+
 
 .md
   .home
@@ -129,8 +123,8 @@
         img
           width: 209px
       .text-items
-          .item-name
-            text-align: center
+        .item-name
+          text-align: center
 
 .md, .xs
   .home
