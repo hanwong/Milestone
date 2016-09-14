@@ -1,0 +1,82 @@
+.pricing
+  .pricing-title
+    margin-bottom: 10px
+  .pricing-desc
+    position: relative
+    margin-bottom: 65px
+    &::after
+      +title_line
+
+  .pricing-items
+    +flex-align-center(v, row wrap)
+    article
+      flex: 1 0 33%
+      +flex-align-center(both, column wrap)      
+      padding-right: 10px
+      padding-left: 10px
+      margin-bottom: 10px
+
+      [class*="-img"]
+        +flex-align-center
+        transform: scale(0.85)
+        margin-bottom: 35px
+        height: 240px
+
+      [class*="-title"], [class*="-desc"], [class*="-price"]
+        margin-bottom: 15px
+
+      [class*="-desc"]
+        padding-right: 15px
+        padding-left: 15px
+        text-align: center
+      
+      [class*="-price"]
+        position: relative
+        .dollar, .cost, .per
+          font-family: $mont
+          font-weight: 700
+        .dollar, .per
+          font-size: 20px
+          color: $basic-color
+        .dollar
+          position: absolute
+          top: 0.5em
+          left: -1em
+        .cost
+          font-size: 50px
+
+      [class*="-link"]
+        +flex-align-center
+        font-family: $mont
+        font-size: 12px
+        text-transform: uppercase
+        padding: 15px 50px 15px
+        letter-spacing: 0.2em
+        color: #fff
+        text-decoration: none
+        border-radius: 30px
+        border: 2px solid $basic-color
+        &:hover
+          background-color: $basic-color
+
+.md, .xs 
+  .pricing
+    .pricing-desc
+      margin-bottom: 50px
+    .pricing-items
+      article
+        [class*="-img"]
+          transform: scale(0.7)
+          height: 252px
+          margin-bottom: 15px
+
+.xs 
+  .pricing
+    .pricing-items
+      flex-direction: column
+      article
+        [class*="-img"]
+          height: auto
+        [class*="-desc"]
+          padding: 0
+          margin-bottom: 20px
