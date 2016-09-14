@@ -12,29 +12,30 @@
     article
       flex: 1 0 33%
       +flex-align-center(both, column wrap)      
-      padding-right: 10px
-      padding-left: 10px
+      // padding-right: 10px
+      // padding-left: 10px
       margin-bottom: 10px
 
       [class*="-img"]
         +flex-align-center
         transform: scale(0.85)
         margin-bottom: 35px
+        width: 100%
         height: 240px
 
-      [class*="-title"], [class*="-desc"], [class*="-price"]
+      [class*="-title"], [class*="-desc"]
         margin-bottom: 15px
 
       [class*="-desc"]
-        padding-right: 15px
-        padding-left: 15px
+        width: 80%
         text-align: center
       
       [class*="-price"]
         position: relative
+        margin-bottom: 25px
         .dollar, .cost, .per
           font-family: $mont
-          font-weight: 700
+          font-weight: 400
         .dollar, .per
           font-size: 20px
           color: $basic-color
@@ -50,7 +51,7 @@
         font-family: $mont
         font-size: 12px
         text-transform: uppercase
-        padding: 15px 50px 15px
+        padding: 10px 40px 10px
         letter-spacing: 0.2em
         color: #fff
         text-decoration: none
@@ -66,10 +67,11 @@
     .pricing-items
       article
         [class*="-img"]
-          transform: scale(0.7)
           height: 252px
           margin-bottom: 15px
-
+          img
+            max-width: 200px
+        
 .xs 
   .pricing
     .pricing-items
@@ -77,6 +79,12 @@
       article
         [class*="-img"]
           height: auto
+          img
+            max-width: 257px
+
         [class*="-desc"]
           padding: 0
+          margin-bottom: 20px
+
+        [class*="-link"]
           margin-bottom: 20px

@@ -943,8 +943,6 @@ p[class*="name"], p[class*="title"] {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  padding-right: 10px;
-  padding-left: 10px;
   margin-bottom: 10px;
 }
 
@@ -956,26 +954,27 @@ p[class*="name"], p[class*="title"] {
   align-items: center;
   transform: scale(0.85);
   margin-bottom: 35px;
+  width: 100%;
   height: 240px;
 }
 
-.pricing .pricing-items article [class*="-title"], .pricing .pricing-items article [class*="-desc"], .pricing .pricing-items article [class*="-price"] {
+.pricing .pricing-items article [class*="-title"], .pricing .pricing-items article [class*="-desc"] {
   margin-bottom: 15px;
 }
 
 .pricing .pricing-items article [class*="-desc"] {
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 80%;
   text-align: center;
 }
 
 .pricing .pricing-items article [class*="-price"] {
   position: relative;
+  margin-bottom: 25px;
 }
 
 .pricing .pricing-items article [class*="-price"] .dollar, .pricing .pricing-items article [class*="-price"] .cost, .pricing .pricing-items article [class*="-price"] .per {
   font-family: "Montserrat";
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .pricing .pricing-items article [class*="-price"] .dollar, .pricing .pricing-items article [class*="-price"] .per {
@@ -1002,7 +1001,7 @@ p[class*="name"], p[class*="title"] {
   font-family: "Montserrat";
   font-size: 12px;
   text-transform: uppercase;
-  padding: 15px 50px 15px;
+  padding: 10px 40px 10px;
   letter-spacing: 0.2em;
   color: #fff;
   text-decoration: none;
@@ -1019,9 +1018,12 @@ p[class*="name"], p[class*="title"] {
 }
 
 .md .pricing .pricing-items article [class*="-img"], .xs .pricing .pricing-items article [class*="-img"] {
-  transform: scale(0.7);
   height: 252px;
   margin-bottom: 15px;
+}
+
+.md .pricing .pricing-items article [class*="-img"] img, .xs .pricing .pricing-items article [class*="-img"] img {
+  max-width: 200px;
 }
 
 .xs .pricing .pricing-items {
@@ -1032,9 +1034,37 @@ p[class*="name"], p[class*="title"] {
   height: auto;
 }
 
+.xs .pricing .pricing-items article [class*="-img"] img {
+  max-width: 257px;
+}
+
 .xs .pricing .pricing-items article [class*="-desc"] {
   padding: 0;
   margin-bottom: 20px;
+}
+
+.xs .pricing .pricing-items article [class*="-link"] {
+  margin-bottom: 20px;
+}
+
+.about-us .about-us-title {
+  margin-bottom: 10px;
+}
+
+.about-us .about-us-desc {
+  position: relative;
+  margin-bottom: 65px;
+}
+
+.about-us .about-us-desc::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  width: 65px;
+  border-top: 1px solid #ac9455;
 }
 
 /*# sourceMappingURL=../css/maps/style.css.map */
