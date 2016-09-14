@@ -1,16 +1,29 @@
-<section class="features" id="features" data-ng-controller="listCtrl as list">
-  <div class="btn-group" isotope-filter isotope-filter-event="filter-elements" >
-    <button isotope-filter-by="*" class="btn btn-default active">all</button>
-    <button isotope-filter-by=".app" class="btn btn-default">app</button>
-    <button isotope-filter-by=".branding" class="btn btn-default">branding</button>
-    <button isotope-filter-by=".web" class="btn btn-default">web</button>
-  </div>
-  <div isotope-grid="list.contents" isotope-filter-event="filter-elements" isotope-reload-event="reload-elements" >
-    <div class="{{item.category}} element-item" data-ng-repeat="item in list.contents">
-      <article class="card">
-        <span class="front">{{item.name}}</span>
-        <span class="back">{{item.description}}</span>
-      </article>
-    </div>
+<section class="features" id="features">
+  <h2 class="features-title">SOME FEATURES</h1>
+  <p class="features-desc">This little wandering journey, without settled place of abode.</p>
+  <div class="features-items">
+    <article class="item-quality">
+      <div class="quality-img">
+        <img src="/public/src/img/medal.png" alt="quality">
+      </div>
+      <p class="quality-title">quality</p>
+      <p class="quality-desc">As we passed, I remarked a beautiful church-spire rising above some old elms in the park; and before them, in the midst of a lawn.</p>
+    </article>
+
+    <article class="item-price">
+      <div class="price-img">
+        <img src="/public/src/img/wallet-icon.png" alt="best price">
+      </div>
+      <p class="price-title">best price</p>
+      <p class="price-desc">Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</p>
+    </article>
+
+    <article class="item-shipping">
+      <div class="shipping-img">
+        <img src="/public/src/img/car-icon.png" alt="free shipping">
+      </div>
+      <p class="shipping-title">free shipping</p>
+      <p class="shipping-desc">Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key.</p>
+    </article>
   </div>
 </section>

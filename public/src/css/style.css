@@ -38,6 +38,7 @@ p[class*="name"], p[class*="title"] {
   font-family: "Montserrat";
   font-weight: 300;
   font-size: 20px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
@@ -51,8 +52,7 @@ p[class*="name"], p[class*="title"] {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 30px;
   min-height: 90vh;
   width: 100%;
   color: #fff;
@@ -68,6 +68,7 @@ p[class*="name"], p[class*="title"] {
 }
 
 .home {
+  min-height: 100vh;
   padding-top: 140px;
   padding-bottom: 80px;
 }
@@ -76,7 +77,7 @@ p[class*="name"], p[class*="title"] {
   padding-top: 80px;
 }
 
-.testimonials {
+.testimonials, .features {
   flex-flow: column;
 }
 
@@ -426,6 +427,11 @@ p[class*="name"], p[class*="title"] {
   width: 550px;
 }
 
+.home .home-carousel .watch .item-img {
+  padding-top: 3.15px;
+  padding-bottom: 3.15px;
+}
+
 .home .home-carousel .watch img {
   width: 360px;
 }
@@ -505,6 +511,11 @@ p[class*="name"], p[class*="title"] {
   width: 500px;
 }
 
+.md .home .home-carousel .watch .item-img {
+  padding-top: 16.63px;
+  padding-bottom: 16.63px;
+}
+
 .md .home .home-carousel .watch img {
   width: 306px;
 }
@@ -519,6 +530,11 @@ p[class*="name"], p[class*="title"] {
 
 .xs .home .home-carousel .mobile img {
   width: 435px;
+}
+
+.xs .home .home-carousel .watch .item-img {
+  padding-top: 51.51px;
+  padding-bottom: 51.51px;
 }
 
 .xs .home .home-carousel .watch img {
@@ -730,23 +746,23 @@ p[class*="name"], p[class*="title"] {
   display: none;
 }
 
-.features {
+.projects {
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.features .filter-btns {
+.projects .filter-btns {
   display: flex;
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 10px;
 }
 
-.features .filter-btns button {
+.projects .filter-btns button {
   font-size: 30px;
 }
 
-.features .element-item {
+.projects .element-item {
   position: relative;
   float: left;
   width: 150px;
@@ -757,7 +773,7 @@ p[class*="name"], p[class*="title"] {
   perspective: 600px;
 }
 
-.features .element-item .card {
+.projects .element-item .card {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -765,7 +781,7 @@ p[class*="name"], p[class*="title"] {
   transition: transform 1s;
 }
 
-.features .element-item .card span {
+.projects .element-item .card span {
   margin: 0;
   display: block;
   position: absolute;
@@ -774,17 +790,17 @@ p[class*="name"], p[class*="title"] {
   backface-visibility: hidden;
 }
 
-.features .element-item .card .front {
+.projects .element-item .card .front {
   background: #B3B3B3;
 }
 
-.features .element-item .card .back {
+.projects .element-item .card .back {
   color: #000;
   background: #FFFFFF;
   transform: rotateY(180deg);
 }
 
-.features .element-item .card:hover {
+.projects .element-item .card:hover {
   transform: rotateY(180deg);
 }
 
@@ -802,6 +818,82 @@ p[class*="name"], p[class*="title"] {
 
 .xs .element-item {
   width: 230px;
+}
+
+.features .features-title {
+  margin-bottom: 10px;
+}
+
+.features .features-desc {
+  position: relative;
+  margin-bottom: 65px;
+}
+
+.features .features-desc::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  width: 65px;
+  border-top: 1px solid #ac9455;
+}
+
+.features .features-items {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.features .features-items article {
+  flex: 1 0 33%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.features .features-items article [class*="-img"] {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.9);
+  margin-bottom: 35px;
+  height: 145px;
+}
+
+.features .features-items article [class*="-title"] {
+  margin-bottom: 15px;
+}
+
+.features .features-items article [class*="-desc"] {
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.md .features .features-desc, .xs .features .features-desc {
+  margin-bottom: 50px;
+}
+
+.md .features .fetures-items article [class*="-img"], .xs .features .fetures-items article [class*="-img"] {
+  transform: scale(0.85);
+  height: 125px;
+  margin-bottom: 15px;
+}
+
+.xs .features .fetures-items {
+  flex-direction: column;
+}
+
+.xs .features .fetures-items [class*="-desc"] {
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=../css/maps/style.css.map */

@@ -90,30 +90,7 @@
         }        
       ];
 
-      this.selected_index = 'all';
-
-      this.sortItems = function (cls) {
-         this.selected_index = cls;
-      };
-      this.currentCategory = function (cls) {
-        if ( this.selected_index === 'all') {
-          return true;
-        } else{
-          return this.selected_index === cls;
-        }
-      };
     });
-    // .animation('.list-animation', function () {
-    //    return {
-    //     'addClass': function (element, className, done) {
-    //        TweenMax.fromTo(element, 1, { opacity: 0, scale: 0.5}, { opacity: 1, scale: 1, onComplete: done }); 
-    //     },
-    //     'removeClass': function (element, className, done) {
-    //       // console.log(className);
-    //        TweenMax.fromTo(element, 1, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5, onComplete: done }); 
-    //     }
-    //    }
-    // });
 
 
 //END IIFE PATTERN
