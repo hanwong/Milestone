@@ -1,5 +1,5 @@
 <section class="testimonials" id="testimonials" data-ng-controller="peopleCtrl as people">
-  <h1 class="testimonials-title">WHAT CUSTOMERS ARE SAYING</h1>
+  <h2 class="testimonials-title">WHAT CUSTOMERS ARE SAYING</h1>
   <p class="testimonials-desc">This little wandering journey, without settled place of abode.</p>
   <ul class="people-carousel">
     <li class="{{item.class}} people-animation"
@@ -7,9 +7,9 @@
       data-ng-repeat="item in people.contents">
      <div class="item-img"><img data-ng-src="{{item.img}}" alt="{{item.name}}"></div>
      <div class="item-text">
-       <div class="item-description">{{item.description}}</div>
-       <div class="item-name">{{item.name}}</div>
-       <div class="item-role">{{item.role}}</div>
+       <p class="item-description">{{item.description}}</p>
+       <p class="item-name">{{item.name}}</p>
+       <p class="item-role">{{item.role}}</p>
      </div>
     </li>
   </ul>

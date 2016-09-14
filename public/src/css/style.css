@@ -1,11 +1,58 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://brick.a.ssl.fastly.net/Montserrat:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+@import url(https://brick.a.ssl.fastly.net/Montserrat:300,400,700,900);
+h1, h2, h3 {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.md h1, .xs h1 {
+  font-size: 35px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.md h2, .xs h2 {
+  font-size: 24px;
+}
+
+p[class*="description"], p[class*="desc"] {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 14px;
+  color: #a3a3a3;
+}
+
+.md p[class*="description"], .xs p[class*="description"], .md p[class*="desc"], .xs p[class*="desc"] {
+  font-size: 13px;
+}
+
+p[class*="name"], p[class*="title"] {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.md p[class*="name"], .xs p[class*="name"], .md p[class*="title"], .xs p[class*="title"] {
+  font-size: 18px;
+}
+
 .testimonials, .features, .projects, .pricing, .about-us, .contacts, .home {
   position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
   min-height: 90vh;
   width: 100%;
   color: #fff;
@@ -23,6 +70,10 @@
 .home {
   padding-top: 140px;
   padding-bottom: 80px;
+}
+
+.xs .home {
+  padding-top: 80px;
 }
 
 .testimonials {
@@ -79,7 +130,7 @@
   line-height: 2.5;
   font-family: "Montserrat";
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -413,14 +464,10 @@
 
 .home .home-carousel li .text-items .item-name {
   margin-bottom: 20px;
-  font-size: 45px;
-  font-weight: 900;
-  line-height: 45px;
 }
 
 .home .home-carousel li .text-items .item-description {
   margin-bottom: 20px;
-  font-family: "Open Sans";
   font-size: 13px;
   line-height: 24px;
   color: #a3a3a3;
@@ -470,10 +517,6 @@
   bottom: 30px;
 }
 
-.xs .home .home-carousel .item-img {
-  height: 55vh;
-}
-
 .xs .home .home-carousel .mobile img {
   width: 435px;
 }
@@ -499,8 +542,6 @@
 
 .md .home .home-carousel li.active .text-items .item-name, .xs .home .home-carousel li.active .text-items .item-name {
   margin-bottom: 10px;
-  font-size: 35px;
-  line-height: 1;
 }
 
 .md .home .home-carousel li.active .text-items .item-description, .xs .home .home-carousel li.active .text-items .item-description {
@@ -522,18 +563,12 @@
 
 .testimonials .testimonials-title {
   margin-bottom: 10px;
-  font-family: "Montserrat";
-  font-size: 30px;
-  font-weight: 900;
   color: #2b2b2b;
 }
 
 .testimonials .testimonials-desc {
   position: relative;
   margin-bottom: 65px;
-  font-family: "Open Sans";
-  font-size: 14px;
-  color: #a3a3a3;
 }
 
 .testimonials .testimonials-desc::after {
@@ -589,16 +624,14 @@
   width: 300px;
 }
 
-.testimonials .people-carousel li.current .item-name, .testimonials .people-carousel li.standby-left .item-name, .testimonials .people-carousel li.standby-right .item-name {
-  font-size: 30px;
-}
-
 .testimonials .people-carousel li.current .item-description, .testimonials .people-carousel li.standby-left .item-description, .testimonials .people-carousel li.standby-right .item-description {
-  font-size: 14px;
+  text-align: center;
 }
 
 .testimonials .people-carousel li.current .item-role, .testimonials .people-carousel li.standby-left .item-role, .testimonials .people-carousel li.standby-right .item-role {
-  font-size: 14px;
+  font-family: "Montserrat";
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .testimonials .people-carousel li.current {
@@ -624,6 +657,14 @@
 }
 
 .testimonials .people-carousel li.standby-right .item-description {
+  display: none;
+}
+
+.xs .testimonials .people-carousel li.current {
+  transform: scale(0.8);
+}
+
+.xs .testimonials .people-carousel li.standby-left, .xs .testimonials .people-carousel li.standby-right {
   display: none;
 }
 

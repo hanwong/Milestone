@@ -1,16 +1,15 @@
 .testimonials
   .testimonials-title
     margin-bottom: 10px
-    font-family: $mont
-    font-size: 30px
-    font-weight: 900
+    // font-family: $mont
+    // font-size: 30px
+    // font-weight: 900
     color: $font-black
   .testimonials-desc
     position: relative
     margin-bottom: 65px
-    font-family: $open-sans
-    font-size: 14px
-    color: $gray
+    // font-family: $open-sans
+    // color: $gray
     &::after
       content: ''
       position: absolute
@@ -20,7 +19,6 @@
       display: block
       width: 65px
       border-top: 1px solid $basic-color
-
 
   .prev, .next
     position: absolute
@@ -53,11 +51,13 @@
         align-items: center
         width: 300px
         .item-name
-          font-size: 30px
+
         .item-description
-          font-size: 14px
+          text-align: center
         .item-role
-          font-size: 14px
+          font-family: $mont
+          font-size: 12px
+          text-transform: uppercase
       &.current
         margin-left: 33.333%
         .item-description
@@ -71,4 +71,13 @@
         margin-left: 66.666%
         transform: scale(0.8)
         .item-description
+          display: none
+
+.xs
+  .testimonials
+    .people-carousel
+      li
+        &.current
+          transform: scale(0.8)
+        &.standby-left, &.standby-right
           display: none
