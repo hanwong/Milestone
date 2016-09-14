@@ -1,0 +1,18 @@
+<section class="testimonials" id="testimonials" data-ng-controller="peopleCtrl as people">
+  <h1 class="testimonials-title">WHAT CUSTOMERS ARE SAYING</h1>
+  <p class="testimonials-desc">This little wandering journey, without settled place of abode.</p>
+  <ul class="people-carousel">
+    <li class="{{item.class}} people-animation"
+      data-ng-class="people.currentClass( '{{item.class}}' )"
+      data-ng-repeat="item in people.contents">
+     <div class="item-img"><img data-ng-src="{{item.img}}" alt="{{item.name}}"></div>
+     <div class="item-text">
+       <div class="item-description">{{item.description}}</div>
+       <div class="item-name">{{item.name}}</div>
+       <div class="item-role">{{item.role}}</div>
+     </div>
+    </li>
+  </ul>
+  <button type="button" class="prev" data-ng-click="people.prevItem()"></button>
+  <button type="button" class="next" data-ng-click="people.nextItem()"></button>
+</section>

@@ -1,0 +1,16 @@
+<section class="features" id="features" data-ng-controller="listCtrl as list">
+  <div class="btn-group" isotope-filter isotope-filter-event="filter-elements" >
+    <button isotope-filter-by="*" class="btn btn-default active">all</button>
+    <button isotope-filter-by=".app" class="btn btn-default">app</button>
+    <button isotope-filter-by=".branding" class="btn btn-default">branding</button>
+    <button isotope-filter-by=".web" class="btn btn-default">web</button>
+  </div>
+  <div isotope-grid="list.contents" isotope-filter-event="filter-elements" isotope-reload-event="reload-elements" >
+    <div class="{{item.category}} element-item" data-ng-repeat="item in list.contents">
+      <article class="card">
+        <span class="front">{{item.name}}</span>
+        <span class="back">{{item.description}}</span>
+      </article>
+    </div>
+  </div>
+</section>

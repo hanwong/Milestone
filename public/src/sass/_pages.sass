@@ -1,35 +1,32 @@
-.testimonials, .features, .projects, .pricing, .about-us, .contacts
-  position: relative
-
 .testimonials, .features, .projects, .pricing, .about-us, .contacts, .home
+  position: relative
   +flex-align-center(both, row wrap)
   min-height: 90vh
   width: 100%
   font-size: 40px
   color: #fff
 
-.home
-  padding-top: 125px
-  min-height: 100vh
+.home, .features, .pricing, .contacts
   background: $black
 
-.testimonials
-  flex-flow: column
+.testimonials, .projects, .about-us
   background: #fff
   color: #000
 
+.home
+  padding-top: 140px
+  padding-bottom: 80px
+
+.testimonials
+  flex-flow: column
+
 .features
-  background: #FFCC66
 
 .projects
-  background: #CC66FF
 
 .pricing
-  background: #FF6666
 
 .about-us
-  background: #6666FF
 
 .contacts
-  background: #FF8000
 

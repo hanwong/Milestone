@@ -1,10 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://brick.a.ssl.fastly.net/Montserrat:400,700,900);
-.testimonials, .features, .projects, .pricing, .about-us, .contacts {
-  position: relative;
-}
-
 .testimonials, .features, .projects, .pricing, .about-us, .contacts, .home {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -15,36 +12,22 @@
   color: #fff;
 }
 
-.home {
-  padding-top: 125px;
-  min-height: 100vh;
+.home, .features, .pricing, .contacts {
   background: #141414;
 }
 
-.testimonials {
-  flex-flow: column;
+.testimonials, .projects, .about-us {
   background: #fff;
   color: #000;
 }
 
-.features {
-  background: #FFCC66;
+.home {
+  padding-top: 140px;
+  padding-bottom: 80px;
 }
 
-.projects {
-  background: #CC66FF;
-}
-
-.pricing {
-  background: #FF6666;
-}
-
-.about-us {
-  background: #6666FF;
-}
-
-.contacts {
-  background: #FF8000;
+.testimonials {
+  flex-flow: column;
 }
 
 .gnb-nav {
@@ -337,11 +320,6 @@
   display: none;
 }
 
-.home {
-  position: relative;
-  padding-bottom: 80px;
-}
-
 .home .arrow-btns button {
   position: absolute;
   top: 50%;
@@ -544,15 +522,30 @@
 }
 
 .testimonials .testimonials-title {
+  margin-bottom: 10px;
   font-family: "Montserrat";
   font-size: 30px;
+  font-weight: 900;
   color: #2b2b2b;
 }
 
 .testimonials .testimonials-desc {
+  position: relative;
+  margin-bottom: 65px;
   font-family: "Open Sans";
   font-size: 14px;
   color: #a3a3a3;
+}
+
+.testimonials .testimonials-desc::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 65px;
+  border-top: 1px solid #ac9455;
 }
 
 .testimonials .prev, .testimonials .next {

@@ -1,12 +1,27 @@
 .testimonials
   .testimonials-title
+    margin-bottom: 10px
     font-family: $mont
     font-size: 30px
+    font-weight: 900
     color: $font-black
   .testimonials-desc
+    position: relative
+    margin-bottom: 65px
     font-family: $open-sans
     font-size: 14px
     color: $gray
+    &::after
+      content: ''
+      position: absolute
+      bottom: -25px
+      left: 50%
+      transform: translateX(-50%)
+      display: block
+      width: 65px
+      border-top: 1px solid $basic-color
+
+
   .prev, .next
     position: absolute
     top: 50%

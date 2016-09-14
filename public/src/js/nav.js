@@ -43,6 +43,9 @@
       })
       .setClassToggle(selector, 'active')
       .addTo(ctrl);
+      // .on('enter', function (evt) {
+      //     viewUpdate(idx);
+      // });
   });
 
   // side navigation 링크 이동시 active 클래스 추가

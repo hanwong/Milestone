@@ -99,7 +99,7 @@
     global.location.hash = page;
 
     // 웹 브라우저가 수행하는 브라우저의 기본 동작 차단
-    // return false;
+    return false;
   }
 
   /**

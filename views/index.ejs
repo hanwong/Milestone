@@ -9,7 +9,15 @@
 <body>
   <% include partials/gnb_nav.ejs %>
   <% include partials/side_nav.ejs %>
-  <% include partials/pages.ejs %>
+  <main data-ng-app="ngUI">
+    <% include partials/home.ejs %>
+    <% include partials/testimonials.ejs %>
+    <% include partials/features.ejs %>
+    <% include partials/projects.ejs %>
+    <% include partials/pricing.ejs %>
+    <% include partials/about_us.ejs %>
+    <% include partials/contacts.ejs %>
+  </main>
 
 <% include partials/script.ejs %>
 </body>
