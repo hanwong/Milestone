@@ -576,7 +576,7 @@ p[class*="name"], p[class*="title"] {
   position: absolute;
   bottom: -25px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%);
   display: block;
   width: 65px;
   border-top: 1px solid #ac9455;
@@ -584,7 +584,7 @@ p[class*="name"], p[class*="title"] {
 
 .testimonials .prev, .testimonials .next {
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: 11px;
   height: 19px;
   cursor: pointer;
@@ -592,7 +592,7 @@ p[class*="name"], p[class*="title"] {
 
 .testimonials .prev {
   left: 50%;
-  transform: translate(-150px, 0);
+  transform: translate(-160px, 0);
   background-image: url("/public/src/img/left-normal.png");
 }
 
@@ -602,7 +602,7 @@ p[class*="name"], p[class*="title"] {
 
 .testimonials .next {
   right: 50%;
-  transform: translate(150px, 0);
+  transform: translate(160px, 0);
   background-image: url("/public/src/img/right-normal.png");
 }
 
@@ -622,15 +622,26 @@ p[class*="name"], p[class*="title"] {
   justify-content: center;
   align-items: center;
   width: 300px;
+  height: auto;
 }
 
-.testimonials .people-carousel li.current .item-description, .testimonials .people-carousel li.standby-left .item-description, .testimonials .people-carousel li.standby-right .item-description {
+.testimonials .people-carousel li.current .item-name, .testimonials .people-carousel li.current .item-description, .testimonials .people-carousel li.current .item-role, .testimonials .people-carousel li.current .item-quote, .testimonials .people-carousel li.standby-left .item-name, .testimonials .people-carousel li.standby-left .item-description, .testimonials .people-carousel li.standby-left .item-role, .testimonials .people-carousel li.standby-left .item-quote, .testimonials .people-carousel li.standby-right .item-name, .testimonials .people-carousel li.standby-right .item-description, .testimonials .people-carousel li.standby-right .item-role, .testimonials .people-carousel li.standby-right .item-quote {
   text-align: center;
 }
 
+.testimonials .people-carousel li.current .item-name, .testimonials .people-carousel li.current .item-quote, .testimonials .people-carousel li.standby-left .item-name, .testimonials .people-carousel li.standby-left .item-quote, .testimonials .people-carousel li.standby-right .item-name, .testimonials .people-carousel li.standby-right .item-quote {
+  margin-top: 20px;
+}
+
+.testimonials .people-carousel li.current .item-description, .testimonials .people-carousel li.standby-left .item-description, .testimonials .people-carousel li.standby-right .item-description {
+  margin-top: 15px;
+}
+
 .testimonials .people-carousel li.current .item-role, .testimonials .people-carousel li.standby-left .item-role, .testimonials .people-carousel li.standby-right .item-role {
+  margin-top: 10px;
   font-family: "Montserrat";
   font-size: 12px;
+  color: #ac9455;
   text-transform: uppercase;
 }
 
@@ -638,7 +649,7 @@ p[class*="name"], p[class*="title"] {
   margin-left: 33.333%;
 }
 
-.testimonials .people-carousel li.current .item-description {
+.testimonials .people-carousel li.current .item-description, .testimonials .people-carousel li.current .item-quote {
   display: block;
 }
 
@@ -647,7 +658,7 @@ p[class*="name"], p[class*="title"] {
   transform: scale(0.8);
 }
 
-.testimonials .people-carousel li.standby-left .item-description {
+.testimonials .people-carousel li.standby-left .item-description, .testimonials .people-carousel li.standby-left .item-quote {
   display: none;
 }
 
@@ -656,11 +667,62 @@ p[class*="name"], p[class*="title"] {
   transform: scale(0.8);
 }
 
-.testimonials .people-carousel li.standby-right .item-description {
+.testimonials .people-carousel li.standby-right .item-description, .testimonials .people-carousel li.standby-right .item-quote {
   display: none;
 }
 
+.md .testimonials .prev, .md .testimonials .next, .xs .testimonials .prev, .xs .testimonials .next {
+  top: 45%;
+}
+
+.md .testimonials .testimonials-desc, .xs .testimonials .testimonials-desc {
+  margin-bottom: 50px;
+}
+
+.md .testimonials .testimonials-desc::after, .xs .testimonials .testimonials-desc::after {
+  width: 40px;
+}
+
+.md .testimonials .people-carousel, .xs .testimonials .people-carousel {
+  height: auto;
+}
+
+.md .testimonials .people-carousel li.current, .md .testimonials .people-carousel li.standby-left, .md .testimonials .people-carousel li.standby-right, .xs .testimonials .people-carousel li.current, .xs .testimonials .people-carousel li.standby-left, .xs .testimonials .people-carousel li.standby-right {
+  width: 236px;
+}
+
+.md .testimonials .people-carousel li.current, .xs .testimonials .people-carousel li.current {
+  transform: scale(0.8);
+}
+
+.md .testimonials .people-carousel li.standby-left, .xs .testimonials .people-carousel li.standby-left {
+  transform: scale(0.6);
+}
+
+.md .testimonials .people-carousel li.standby-right, .xs .testimonials .people-carousel li.standby-right {
+  transform: scale(0.6);
+}
+
+.md .testimonials .prev {
+  left: 52%;
+}
+
+.md .testimonials .next {
+  right: 52%;
+}
+
+.xs .testimonials .prev {
+  left: 10%;
+  transform: translate(0);
+}
+
+.xs .testimonials .next {
+  right: 10%;
+  transform: translate(0);
+}
+
 .xs .testimonials .people-carousel li.current {
+  margin-left: 0;
   transform: scale(0.8);
 }
 

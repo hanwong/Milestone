@@ -1,40 +1,35 @@
 .testimonials
   .testimonials-title
     margin-bottom: 10px
-    // font-family: $mont
-    // font-size: 30px
-    // font-weight: 900
     color: $font-black
   .testimonials-desc
     position: relative
     margin-bottom: 65px
-    // font-family: $open-sans
-    // color: $gray
     &::after
       content: ''
       position: absolute
       bottom: -25px
       left: 50%
-      transform: translateX(-50%)
+      transform: translate(-50%)
       display: block
       width: 65px
       border-top: 1px solid $basic-color
 
   .prev, .next
     position: absolute
-    top: 50%
+    top: 45%
     width: 11px
     height: 19px
     cursor: pointer
   .prev
     left: 50%
-    transform: translate(-150px, 0)
+    transform: translate(-160px, 0)
     background-image: url("/public/src/img/left-normal.png")
     &:hover
       background-image: url("/public/src/img/left-hover.png")
   .next
     right: 50%
-    transform: translate(150px, 0)
+    transform: translate(160px, 0)
     background-image: url("/public/src/img/right-normal.png")
     &:hover
       background-image: url("/public/src/img/right-hover.png")
@@ -50,34 +45,75 @@
         justify-content: center
         align-items: center
         width: 300px
-        .item-name
-
-        .item-description
+        height: auto
+        .item-name, .item-description, .item-role, .item-quote
           text-align: center
+        .item-name, .item-quote
+          margin-top: 20px
+        .item-description
+          margin-top: 15px
         .item-role
+          margin-top: 10px
           font-family: $mont
           font-size: 12px
+          color: $basic-color
           text-transform: uppercase
       &.current
         margin-left: 33.333%
-        .item-description
+        .item-description, .item-quote
           display: block
       &.standby-left
         margin-left: 0%
         transform: scale(0.8)
-        .item-description
+        .item-description, .item-quote
           display: none
       &.standby-right
         margin-left: 66.666%
         transform: scale(0.8)
-        .item-description
+        .item-description, .item-quote
           display: none
+
+.md, .xs
+  .testimonials
+    .prev, .next
+      top: 45%
+
+    .testimonials-desc
+      margin-bottom: 50px
+      &::after
+        width: 40px
+
+    .people-carousel
+      height: auto
+      li
+        &.current, &.standby-left, &.standby-right
+          width: 236px
+        &.current
+          transform: scale(0.8)
+        &.standby-left
+          transform: scale(0.6)
+        &.standby-right
+          transform: scale(0.6)
+
+.md
+  .testimonials
+    .prev
+      left: 52%
+    .next
+      right: 52%
 
 .xs
   .testimonials
+    .prev
+      left: 10%
+      transform: translate(0)
+    .next
+      right: 10%
+      transform: translate(0)
     .people-carousel
       li
         &.current
+          margin-left: 0
           transform: scale(0.8)
         &.standby-left, &.standby-right
           display: none
