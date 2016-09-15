@@ -83,6 +83,11 @@ p[class*="name"], p[class*="title"] {
   flex-flow: column;
 }
 
+.about-us {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .gnb-nav {
   display: -webkit-flex;
   display: flex;
@@ -1047,6 +1052,10 @@ p[class*="name"], p[class*="title"] {
   margin-bottom: 20px;
 }
 
+.about-us {
+  overflow: hidden;
+}
+
 .about-us .about-us-title {
   margin-bottom: 10px;
 }
@@ -1065,6 +1074,164 @@ p[class*="name"], p[class*="title"] {
   display: block;
   width: 65px;
   border-top: 1px solid #ac9455;
+}
+
+.about-us .social-items {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  margin-bottom: 300px;
+}
+
+.about-us .social-items [class*="item-"] {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.about-us .social-items [class*="item-"] .img-wrapper {
+  margin-top: 8px;
+  width: 28px;
+  height: auto;
+}
+
+.about-us .social-items [class*="item-"] .img-wrapper img {
+  width: 100%;
+}
+
+.about-us .social-items [class*="item-"] .figure-wrapper {
+  margin-left: 5px;
+}
+
+.about-us .social-items [class*="item-"] .figure-wrapper .count {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 33px;
+}
+
+.about-us .social-items [class*="item-"] .figure-wrapper .unit {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 13px;
+  color: #a3a3a3;
+}
+
+.about-us .insta-items {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-us .insta-items img {
+  vertical-align: bottom;
+}
+
+.about-us .insta-items .insta-follow {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background: #191919;
+}
+
+.about-us .insta-items .insta-follow .insta-title {
+  margin-bottom: 15px;
+  font-size: 10px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.about-us .insta-items .insta-follow .insta-logo :first-child {
+  margin-bottom: 10px;
+}
+
+.about-us .insta-items .insta-follow .insta-desc {
+  margin: 15px 15px 25px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.about-us .insta-items .insta-follow [class*="-link"] {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 10px 40px 10px;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid #ac9455;
+  background-color: #101010;
+}
+
+.about-us .insta-items .insta-follow [class*="-link"]:hover {
+  background-color: #ac9455;
+}
+
+.xs .about-us {
+  padding-bottom: 0;
+}
+
+.xs .about-us .social-items {
+  margin-bottom: 15px;
+}
+
+.xs .about-us .social-items [class*="item-"] {
+  flex: 1 0 30%;
+  margin-bottom: 20px;
+}
+
+.xs .about-us .social-items [class*="item-"] .figure-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.xs .about-us .social-items [class*="item-"] .figure-wrapper .unit {
+  align-self: flex-end;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.xs .about-us .social-items [class*="item-"] .figure-wrapper .unit br {
+  display: none;
+}
+
+.xs .about-us .insta-items {
+  position: static;
+  flex-wrap: wrap;
+}
+
+.xs .about-us .insta-items .insta-item02, .xs .about-us .insta-items .insta-item03 {
+  width: 50%;
+}
+
+.xs .about-us .insta-items .insta-item02 img, .xs .about-us .insta-items .insta-item03 img {
+  width: 100%;
+}
+
+.xs .about-us .insta-items .insta-item01, .xs .about-us .insta-items .insta-item04, .xs .about-us .insta-items .insta-item05, .xs .about-us .insta-items .insta-item06 {
+  display: none;
+}
+
+.xs .about-us .insta-items .insta-follow {
+  order: 10;
+  width: 100%;
+  height: 252px;
 }
 
 /*# sourceMappingURL=../css/maps/style.css.map */
