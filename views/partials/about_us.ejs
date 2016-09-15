@@ -1,5 +1,5 @@
 <section class="about-us" id="about-us" >
-  <h2 class="about-us-title">about us</h1>
+  <h2 class="about-us-title">about us</h2>
   <p class="about-us-desc">This little wandering journey, without settled place of abode.</p>
 
   <article class="social-items">
@@ -61,5 +61,48 @@
     <div class="insta-item05"><img src="/public/src/img/insta-item5.png" alt="insta-item05"></div>
     <div class="insta-item06"><img src="/public/src/img/insta-item6.png" alt="insta-item06"></div>
     
+  </section>
+  
+</section>
+
+<section class="subscribe" data-ng-controller="formCtrl">
+  <div class="subscribe-img">
+    <img src="/public/src/img/mac.png" alt="mac illust image">
+  </div>
+  <section class="subscribe-form">
+    <h2 class="subscribe-title">made with</h2>
+    <h3 class="subscribe-desc">milestone</h3>
+    <form name="form" novalidate>
+
+      <div class="sub-firstname">
+        <label for="firstName">name</label><br>
+        <input class="ngInput" type="text" ng-model="user.firstname" name="firstName" required="">
+        <br>
+        <div class="valid-msg" ng-show="form.$submitted || form.firstName.$touched">
+          <div  ng-show="form.firstName.$error.required">Tell us your name.</div>
+        </div>
+      </div>
+
+      <div class="sub-lastname">
+        <label for="lastName">last name</label><br>
+        <input class="ngInput" type="text" ng-model="user.lastname" name="lastName" required="">
+        <br>
+        <div class="valid-msg" ng-show="form.$submitted || form.lastName.$touched">
+          <div ng-show="form.lastName.$error.required">Tell us your last name.</div>
+        </div>
+      </div>
+
+      <div class="sub-email">
+        <label for="">email</label><br>
+        <input class="ngInput" type="email" ng-model="user.email" name="subEmail" required="">
+        <br>
+        <div class="valid-msg" ng-show="form.$submitted || form.subEmail.$touched">
+          <span ng-show="form.subEmail.$error.required">Tell us your email.</span>
+          <span ng-show="form.subEmail.$error.email">This is not a valid email.</span>
+        </div>
+      </div>
+
+    </form>
+    <a class="subscribe-link" href="#"><p>subscribe</p></a>
   </section>
 </section>

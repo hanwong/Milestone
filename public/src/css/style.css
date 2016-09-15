@@ -1,7 +1,9 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
 @import url(https://brick.a.ssl.fastly.net/Montserrat:300,400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400i);
 h1, h2, h3 {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -25,7 +27,7 @@ h2 {
 }
 
 p[class*="description"], p[class*="desc"] {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   color: #a3a3a3;
@@ -36,7 +38,7 @@ p[class*="description"], p[class*="desc"] {
 }
 
 p[class*="name"], p[class*="title"] {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 0.2em;
@@ -60,11 +62,11 @@ p[class*="name"], p[class*="title"] {
   color: #fff;
 }
 
-.home, .features, .pricing, .contacts {
+.home, .features, .pricing {
   background: #141414;
 }
 
-.testimonials, .projects, .about-us {
+.testimonials, .projects, .about-us, .contacts {
   background: #fff;
   color: #000;
 }
@@ -138,7 +140,7 @@ p[class*="name"], p[class*="title"] {
 
 .gnb-nav .gnb-nav-list [class*="gnb-page"] {
   line-height: 2.5;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 11px;
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -338,7 +340,7 @@ p[class*="name"], p[class*="title"] {
 .side-nav a {
   margin-left: 10px;
   margin-right: 10px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   color: #2b2b2b;
   text-transform: capitalize;
@@ -477,7 +479,7 @@ p[class*="name"], p[class*="title"] {
 }
 
 .home .home-carousel li .text-items .item-name, .home .home-carousel li .text-items .item-link {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
 
@@ -498,8 +500,11 @@ p[class*="name"], p[class*="title"] {
   display: -webkit-flex;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
+  text-transform: uppercase;
   padding: 25px 32px 25px;
   letter-spacing: 0.2em;
   color: #fff;
@@ -508,13 +513,13 @@ p[class*="name"], p[class*="title"] {
   border: 2px solid #ac9455;
 }
 
+.home .home-carousel li .text-items .item-link:hover {
+  background-color: #ac9455;
+}
+
 .home .home-carousel li .text-items .item-link .apple {
   font-size: 22px;
   margin-right: 10px;
-}
-
-.home .home-carousel li .text-items .item-link:hover {
-  background-color: #ac9455;
 }
 
 .md .home {
@@ -670,7 +675,7 @@ p[class*="name"], p[class*="title"] {
 
 .testimonials .people-carousel li.current .item-role, .testimonials .people-carousel li.standby-left .item-role, .testimonials .people-carousel li.standby-right .item-role {
   margin-top: 10px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   color: #ac9455;
   text-transform: uppercase;
@@ -978,7 +983,7 @@ p[class*="name"], p[class*="title"] {
 }
 
 .pricing .pricing-items article [class*="-price"] .dollar, .pricing .pricing-items article [class*="-price"] .cost, .pricing .pricing-items article [class*="-price"] .per {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
@@ -1003,7 +1008,7 @@ p[class*="name"], p[class*="title"] {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   padding: 10px 40px 10px;
@@ -1105,13 +1110,13 @@ p[class*="name"], p[class*="title"] {
 }
 
 .about-us .social-items [class*="item-"] .figure-wrapper .count {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 33px;
 }
 
 .about-us .social-items [class*="item-"] .figure-wrapper .unit {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 13px;
   color: #a3a3a3;
@@ -1159,13 +1164,13 @@ p[class*="name"], p[class*="title"] {
   text-align: center;
 }
 
-.about-us .insta-items .insta-follow [class*="-link"] {
+.about-us .insta-items .insta-follow .insta-link {
   display: -webkit-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   padding: 10px 40px 10px;
@@ -1177,7 +1182,7 @@ p[class*="name"], p[class*="title"] {
   background-color: #101010;
 }
 
-.about-us .insta-items .insta-follow [class*="-link"]:hover {
+.about-us .insta-items .insta-follow .insta-link:hover {
   background-color: #ac9455;
 }
 
@@ -1232,6 +1237,119 @@ p[class*="name"], p[class*="title"] {
   order: 10;
   width: 100%;
   height: 252px;
+}
+
+.subscribe {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+  background: #141414;
+  color: #fff;
+}
+
+.subscribe .subscribe-form {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.subscribe .subscribe-form .subscribe-desc {
+  margin-bottom: 35px;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  color: #ac9455;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+}
+
+.subscribe .subscribe-form .subscribe-link {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 10px 40px 10px;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid #ac9455;
+  background-color: #101010;
+}
+
+.subscribe .subscribe-form .subscribe-link:hover {
+  background-color: #ac9455;
+}
+
+.subscribe .subscribe-form form {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.subscribe .subscribe-form form [class*="sub-"] {
+  flex: 1 0 30%;
+  position: relative;
+}
+
+.subscribe .subscribe-form form [class*="sub-"] label {
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #515151;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.subscribe .subscribe-form form [class*="sub-"] label::after {
+  content: ' ●';
+  color: #ac9455;
+}
+
+.subscribe .subscribe-form form [class*="sub-"] .ngInput {
+  display: flex;
+  align-items: flex-start;
+  width: 93%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  text-transform: capitalize;
+  padding: 10px 40px 10px;
+  color: #a3a3a3;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid #212121;
+  background-color: #212121;
+}
+
+.subscribe .subscribe-form form [class*="sub-"] .ngInput:focus {
+  border: 2px solid #ac9455;
+  background-color: #fff;
+  outline: none;
+}
+
+.subscribe .subscribe-form form [class*="sub-"] .valid-msg {
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  color: #ef5151;
+}
+
+.subscribe .subscribe-form form [class*="sub-"] .ng-touched.ng-invalid {
+  border: 2px solid #ef5151;
 }
 
 /*# sourceMappingURL=../css/maps/style.css.map */
