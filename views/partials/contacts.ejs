@@ -1,4 +1,90 @@
-<section class="contacts" id="contacts" >
+<section class="contacts" id="contacts" data-ng-controller="formCtrl">
   <h2 class="contacts-title">Contact Us</h1>
   <p class="contacts-desc">As we passed, I remarked a beautiful church-spire rising above some old elms in the park.</p>
+  <section class="contacts-form">
+    <form name="form" novalidate>
+
+      <div class="contacts-userName">
+        <label for="userName">name</label><br>
+        <input class="ngInput" type="text" ng-model="user.name" name="userName" required="">
+        <br>
+        <div class="valid-msg" ng-show="form.$submitted || form.userName.$touched">
+          <div  ng-show="form.userName.$error.required">Tell us your name.</div>
+        </div>
+      </div>
+
+      <div class="contacts-email">
+        <label for="contactEmail">email</label><br>
+        <input class="ngInput" type="email" ng-model="user.email" name="contactEmail" required="">
+        <br>
+        <div class="valid-msg" ng-show="form.$submitted || form.contactEmail.$touched">
+          <span ng-show="form.contactEmail.$error.required">Tell us your email.</span>
+          <span ng-show="form.contactEmail.$error.email">This is not a valid email.</span>
+        </div>
+      </div>
+
+      <div class="contacts-msg">
+        <label class="msg" for="contactMsg">message</label><br>
+        <textarea class="msg" type="textbox" ng-model="user.message" name="contactMsg" required=""></textarea>
+      </div>
+    </form>
+    <a class="contacts-link" href="#"><p>subscribe</p></a>
+  </section>
 </section>
+
+<section class="map">
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:225px;width:100%;'><div id='gmap_canvas' style='height:225px;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://add-map.org/'>adding google map to website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=b4b7835fd4079113a274f0a34fcd404139233f3d'></script><script type='text/javascript'>function init_map() {
+              var styles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#ffffff"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#c0c0c0"},{"lightness":20},{"visibility":"on"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2},{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#3f3f3f"}]},{"featureType":"landscape","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#333333"},{"visibility":"on"},{"saturation":"0"},{"lightness":"0"},{"gamma":"1.00"}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#2b2b2b"},{"visibility":"on"},{"gamma":"1"},{"lightness":"0"},{"saturation":"0"}]},{"featureType":"landscape.natural","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry.fill","stylers":[{"visibility":"off"},{"color":"#ff0000"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#222222"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#4a4a4a"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ac9455"},{"lightness":"0"},{"gamma":"1.00"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ac9455"},{"lightness":"0"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ac9455"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#222222"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#1a1a1a"}]}];
+              var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
+                var myOptions = {
+                    zoom: 13,
+                    center: new google.maps.LatLng(44.586452, 33.45887700000003),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControlOptions: {
+                      mapTypeIds: [google.maps.MapTypeId.ROADMAP, "map_style"]
+                    }
+                };
+                map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+                map.mapTypes.set("map_style", styledMap);
+              map.setMapTypeId("map_style");
+
+              var content = "<strong>Our office</strong><br>76 9th Ave, New York, NY 10011";
+
+              // A new Info Window is created and set content
+              var infowindow = new google.maps.InfoWindow({
+                content: content,
+                maxWidth: 250
+              });
+
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(44.586452, 33.45887700000003),
+                    icon: "http://milestone.cern.me/wp-content/themes/milestone.installation/img/pin.svg"
+                });
+                google.maps.event.addListener(marker, "click", function() {
+                    infowindow.open(map, marker);
+                });
+                infowindow.open(map, marker);
+            }
+            google.maps.event.addDomListener(window, "load", init_map);</script>
+</section>
+
+<section class="contacts-info">
+  <div class="office-info">
+    <span class="phone-number"><img src="../../public/src/img/phone-icon.png" alt="phone icon">+1 858-864-1500</span>
+    <span class="office-address"><img src="../../public/src/img/pin-icon.png" alt="pin icon">123 Main Street city, AB 0123, Level 7</span>
+    <span class="mail-address"><img src="../../public/src/img/mail-icon.png" alt="mail icon">hello@milestone.com</span>
+  </div>
+  <div class="social-info">
+    <a href="facebook.com"><img src="/public/src/img/fb-link.png" alt="facebook link"></a>
+    <a href="twitter.com"><img src="/public/src/img/tw-link.png" alt="twitter link"></a>
+    <a href="google.com"><img src="/public/src/img/g-link.png" alt="google+ link"></a>
+  </div>
+</section>
+
+<footer>
+   <p class="footer-title">● COPYRIGHT &copy; 2016 MILESTONE ● </p>
+</footer>
+
+
+            

@@ -1,0 +1,92 @@
+.contacts
+  .contacts-title
+    margin-bottom: 10px
+  .contacts-desc
+    position: relative
+    margin-bottom: 65px
+    &::after
+      +title_line
+  .contacts-form
+    +flex-align-center(both, column wrap)
+    width: 80%
+    .contacts-link
+      +link-btn
+      &:hover
+        color: #fff
+      color: $black
+    form
+      +flex-align-center(v, row wrap)
+      width: 100%
+      margin-bottom: 50px
+      [class*="contacts-"]
+        flex: 1 0 50%
+        position: relative
+        &:nth-child(1)
+          padding-right: 15px
+        &:nth-child(2)
+          padding-left: 15px
+        label
+          margin-bottom: 10px
+          font-family: $mont
+          font-size: 12px
+          color: #515151
+          letter-spacing: 0.2em
+          text-transform: uppercase
+          &:not(.msg)::after 
+            content: ' ●'
+            color: $basic-color
+        .ngInput
+          +input-box(#efefef)
+          &.msg
+            width: 100%
+        textarea
+          padding: 5px
+          width: 100%
+          height: 120px
+          border: 2px solid #efefef
+          border-radius: 10px
+          background: #efefef
+          
+        .valid-msg:not(.msg)
+          position: absolute
+          bottom: 0
+          left: 25px
+          font-family: $open-sans
+          font-size: 11px
+          color: $red
+        .ng-touched.ng-invalid:not(.msg)
+          border: 2px solid $red
+
+.map
+  width: 100%
+  height: 225px
+  #gmap_canvas
+    width: 100%
+
+.contacts-info
+  +flex-align-center(v, row wrap)
+  justify-content: space-between
+  padding: 50px
+  span
+    font-family: $open-sans
+    font-size: 14px
+  .phone-number
+  .office-address
+  .mail-address
+  
+footer
+  +flex-align-center
+  height: 80px
+  background: $black
+  .footer-title
+    font-size: 10px
+    color: #404040
+
+.xs, .md
+  .contacts-info
+    span
+      font-size: 13px
+  footer
+    .footer-title
+      font-size: 10px
+      color: #404040  
