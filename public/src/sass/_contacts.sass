@@ -83,9 +83,19 @@ footer
     color: #404040
 
 .xs, .md
-  .contacts-info
-    span
-      font-size: 13px
+  .contacts
+    .contacts-info
+      span
+        font-size: 13px
+    .contacts-form
+      padding: 30px
+      width: 100%
+      form
+        [class*="contacts-"]
+          flex: 1 0 100%
+          padding: 0
+
+
   footer
     .footer-title
       font-size: 10px

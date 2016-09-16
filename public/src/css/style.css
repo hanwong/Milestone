@@ -1300,6 +1300,7 @@ p[class*="name"], p[class*="title"] {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 50px;
 }
 
 .subscribe .subscribe-form .subscribe-desc {
@@ -1336,7 +1337,7 @@ p[class*="name"], p[class*="title"] {
 .subscribe .subscribe-form form {
   display: -webkit-flex;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   width: 100%;
   margin-bottom: 50px;
@@ -1406,6 +1407,15 @@ p[class*="name"], p[class*="title"] {
 
 .subscribe .subscribe-form form [class*="sub-"] .ng-touched.ng-invalid {
   border: 2px solid #ef5151;
+}
+
+.xs .subscribe .subscribe-img img {
+  width: 430px;
+}
+
+.xs .subscribe .subscribe-form form [class*="sub-"] {
+  flex: 1 0 100%;
+  padding: 0;
 }
 
 .contacts .contacts-title {
@@ -1584,8 +1594,18 @@ footer .footer-title {
   color: #404040;
 }
 
-.xs .contacts-info span, .md .contacts-info span {
+.xs .contacts .contacts-info span, .md .contacts .contacts-info span {
   font-size: 13px;
+}
+
+.xs .contacts .contacts-form, .md .contacts .contacts-form {
+  padding: 30px;
+  width: 100%;
+}
+
+.xs .contacts .contacts-form form [class*="contacts-"], .md .contacts .contacts-form form [class*="contacts-"] {
+  flex: 1 0 100%;
+  padding: 0;
 }
 
 .xs footer .footer-title, .md footer .footer-title {
