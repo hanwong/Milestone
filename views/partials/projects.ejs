@@ -1,14 +1,19 @@
 <section class="projects" id="projects" data-ng-controller="listCtrl as list">
+  <h2 class="projects-title">OUR WORKS</h1>
+  <p class="projects-desc">A hundred thousand grateful loves to your dear papa and mamma.</p>
+  
   <div class="btn-group" isotope-filter isotope-filter-event="filter-elements" >
     <button isotope-filter-by="*" class="btn btn-default active">all</button>
     <button isotope-filter-by=".app" class="btn btn-default">app</button>
     <button isotope-filter-by=".branding" class="btn btn-default">branding</button>
     <button isotope-filter-by=".web" class="btn btn-default">web</button>
   </div>
-  <div isotope-grid="list.contents" isotope-filter-event="filter-elements" isotope-reload-event="reload-elements" >
+  <div class="items-group" isotope-grid="list.contents" isotope-filter-event="filter-elements" isotope-reload-event="reload-elements" >
     <div class="{{item.category}} element-item" data-ng-repeat="item in list.contents">
       <article class="card">
-        <span class="front">{{item.name}}</span>
+        <span class="front">
+          <img data-ng-src="{{item.img}}" alt="{{item.name}}">
+        </span>
         <span class="back">{{item.description}}</span>
       </article>
     </div>
