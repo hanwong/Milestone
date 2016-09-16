@@ -38,7 +38,7 @@
     var gnb_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
-          'duration': $(`${page_names[idx]}`).height()
+          'duration': page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top
           // 'reverse': false
       })
       .setClassToggle(selector, 'active')
@@ -73,7 +73,7 @@
     var side_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
-          'duration': $(`${page_names[idx]}`).height()
+          'duration': page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top
           // 'reverse': false
       })
       .setClassToggle(selector, 'active')
