@@ -30,6 +30,7 @@ h2 {
 
 .md h2, .xs h2 {
   font-size: 24px;
+  text-align: center;
 }
 
 p[class*="description"], p[class*="desc"] {
@@ -41,6 +42,7 @@ p[class*="description"], p[class*="desc"] {
 
 .md p[class*="description"], .xs p[class*="description"], .md p[class*="desc"], .xs p[class*="desc"] {
   font-size: 13px;
+  text-align: center;
 }
 
 p[class*="name"], p[class*="title"] {
@@ -53,6 +55,7 @@ p[class*="name"], p[class*="title"] {
 
 .md p[class*="name"], .xs p[class*="name"], .md p[class*="title"], .xs p[class*="title"] {
   font-size: 18px;
+  text-align: center;
 }
 
 .testimonials, .features, .projects, .pricing, .about-us, .contacts, .home {
@@ -1612,13 +1615,11 @@ p[class*="name"], p[class*="title"] {
   border: 2px solid #ef5151;
 }
 
-.map {
-  width: 100%;
+.map, .gmap_canvas {
   height: 225px;
-}
-
-.map #gmap_canvas {
   width: 100%;
+  overflow: hidden;
+  background: #ae9758;
 }
 
 .contacts-info {
@@ -1630,9 +1631,58 @@ p[class*="name"], p[class*="title"] {
   padding: 50px;
 }
 
-.contacts-info span {
+.contacts-info .office-info {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.contacts-info .office-info .phone-number, .contacts-info .office-info .office-address, .contacts-info .office-info .mail-address {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-right: 30px;
+  padding: 5px 0;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+}
+
+.contacts-info .office-info .phone-number .icon, .contacts-info .office-info .office-address .icon, .contacts-info .office-info .mail-address .icon {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 18px;
+  height: auto;
+}
+
+.contacts-info .office-info .phone-number img {
+  width: 18px;
+  height: 18px;
+}
+
+.contacts-info .office-info .office-address img {
+  width: 8px;
+  height: 18px;
+}
+
+.contacts-info .office-info .mail-address img {
+  width: 18px;
+  height: 13px;
+}
+
+.contacts-info .social-info {
+  padding: 20px 0;
+}
+
+.contacts-info .social-info a img {
+  margin-left: 25px;
+  width: auto;
+  max-height: 15px;
 }
 
 footer {
@@ -1667,6 +1717,21 @@ footer .footer-title {
 .xs footer .footer-title, .md footer .footer-title {
   font-size: 10px;
   color: #404040;
+}
+
+.xs .contacts-info {
+  padding: 30px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.xs .contacts-info .office-info {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.xs .contacts-info .social-info :first-child img {
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=../css/maps/style.css.map */

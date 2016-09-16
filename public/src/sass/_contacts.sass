@@ -57,22 +57,46 @@
         .ng-touched.ng-invalid:not(.msg)
           border: 2px solid $red
 
-.map
-  width: 100%
+.map, .gmap_canvas
   height: 225px
-  #gmap_canvas
-    width: 100%
+  width: 100%
+  overflow: hidden
+  background: #ae9758
 
 .contacts-info
   +flex-align-center(v, row wrap)
   justify-content: space-between
   padding: 50px
-  span
-    font-family: $open-sans
-    font-size: 14px
-  .phone-number
-  .office-address
-  .mail-address
+  .office-info
+    +flex-align-center(v, row wrap)
+    .phone-number, .office-address, .mail-address 
+      +flex-align-center(v, row wrap)
+      margin-right: 30px
+      padding: 5px 0
+      font-family: $open-sans
+      font-size: 14px
+      .icon
+        +flex-align-center
+        margin-right: 10px
+        width: 18px
+        height: auto
+
+    .phone-number img
+      width: 18px
+      height: 18px
+    .office-address img
+      width: 8px
+      height: 18px
+    .mail-address img
+      width: 18px
+      height: 13px
+  .social-info 
+    padding: 20px 0
+    a img
+      margin-left: 25px
+      width: auto
+      max-height: 15px
+
   
 footer
   +flex-align-center
@@ -95,8 +119,19 @@ footer
           flex: 1 0 100%
           padding: 0
 
-
   footer
     .footer-title
       font-size: 10px
       color: #404040  
+
+.xs
+  .contacts-info
+    padding: 30px 20px
+    flex-direction: column
+    align-items: flex-start
+    .office-info
+      flex-direction: column
+      align-items: flex-start
+    .social-info :first-child img
+        margin-left: 0
+
