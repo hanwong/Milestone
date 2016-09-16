@@ -14,7 +14,11 @@
         <span class="front">
           <img data-ng-src="{{item.img}}" alt="{{item.name}}">
         </span>
-        <span class="back">{{item.description}}</span>
+        <span class="back">
+          <p class="item-title">{{item.name}}</p>
+          <p class="item-desc">{{item.description}}</p>
+          <a class="item-link" href="{{item.link}}"><p>view</p></a>
+        </span>
       </article>
     </div>
   </div>

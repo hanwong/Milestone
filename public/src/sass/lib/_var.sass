@@ -35,7 +35,7 @@ $play: "Playfair Display", serif
   width: 65px
   border-top: 1px solid $basic-color
 
-@mixin link-btn($bg:null, $size: 10px 40px 10px )
+@mixin link-btn($bg:null, $size: 10px 40px 10px, $hover-color: $basic-color, $hover-font: null)
   +flex-align-center
   font-family: $mont
   font-size: 12px
@@ -48,7 +48,8 @@ $play: "Playfair Display", serif
   border: 2px solid $basic-color
   background-color: $bg
   &:hover
-    background-color: $basic-color  
+    background-color: $hover-color
+    color: $hover-font
 
 @mixin input-box($color:null, $size: 10px 40px 10px )
   display: flex
@@ -67,3 +68,30 @@ $play: "Playfair Display", serif
     border: 2px solid $basic-color
     background-color: #fff
     outline: none
+
+
+@mixin keyframes($animation)
+  @keyframes #{$animation}
+    @content
+
+@mixin animation($str)
+  animation: $str
+
+
++keyframes(flip-in)
+  // 50%
+  //   transform: translateY(-3px)
+  //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+  100%
+    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+    transform: rotateY( 180deg )
+
++keyframes(flip-out)
+  50%
+    box-shadow: 0 10px 10px #888888
+    transform: rotateY( 180deg )
+  100%
+    transform: translateY(-3px)
+    box-shadow: 0 10px 10px #888888
+
+
