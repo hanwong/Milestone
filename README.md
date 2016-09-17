@@ -19,4 +19,6 @@
   * features 페이지 xs 뷰
     * description 행폭?
 
+  * ScrollMagic이 Anglular 완료전에 되서 ... 높이 설정이 제대로 안됨
+  * ScrollMagic on off
     
