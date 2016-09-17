@@ -41,9 +41,7 @@
           'triggerHook': 0.5,
           'duration': 
             function () {
-               var dur;
-                dur = page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top;
-               return dur;
+               return  page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top;
             } 
       })
       .setClassToggle(selector, 'active')
@@ -79,9 +77,7 @@
           'triggerHook': 0.5,
           'duration': 
             function () {
-               var dur;
-                dur = page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top;
-               return dur;
+               return  page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top;
             } 
       })
       .setClassToggle(selector, 'active')
