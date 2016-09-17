@@ -20,5 +20,7 @@
     * description 행폭?
 
   * ScrollMagic이 Anglular 완료전에 되서 ... 높이 설정이 제대로 안됨
+    * duration을 익명함수의 리턴 값으로 반환하니까 됨...
+
   * ScrollMagic on off
     
