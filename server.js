@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 app.use('/public', express.static(__dirname + '/public'));
-app.set('port', 3000);
+app.set("port", process.env.PORT || 3030);
 
 
 // app.use(function(req, res){
