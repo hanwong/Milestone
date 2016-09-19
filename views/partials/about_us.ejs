@@ -3,6 +3,7 @@
   <p class="about-us-desc">This little wandering journey, without settled place of abode.</p>
 
   <article class="social-items">
+    <!-- <h3 aria-hidden="true">social items</h3> -->
     <div class="item-facebook">
       <div class="img-wrapper">
         <img src="/public/src/img/facebook.png" alt="facebook">
@@ -45,6 +46,7 @@
   </article>
 
   <section class="insta-items">
+    <!-- <h1 aria-hidden="true">instagram folloing page</h1> -->
     <div class="insta-item01"><img src="/public/src/img/insta-item1.png" alt="insta-item01"></div>
     <div class="insta-item02"><img src="/public/src/img/insta-item2.png" alt="insta-item02"></div>
     <div class="insta-item03"><img src="/public/src/img/insta-item3.png" alt="insta-item03"></div>
@@ -66,6 +68,7 @@
 </section>
 
 <section class="subscribe" data-ng-controller="formCtrl">
+  <!-- <h1 aria-hidden="true">subscribe page</h1> -->
   <div class="subscribe-img">
     <img src="/public/src/img/mac.png" alt="mac illust image">
   </div>
@@ -76,29 +79,29 @@
 
       <div class="sub-firstname">
         <label for="firstName">name</label><br>
-        <input class="ngInput" type="text" ng-model="user.firstname" name="firstName" required="">
+        <input class="ngInput" type="text" data-ng-model="user.firstname" name="firstName" required="">
         <br>
-        <div class="valid-msg" ng-show="form.$submitted || form.firstName.$touched">
-          <div  ng-show="form.firstName.$error.required">Tell us your name.</div>
+        <div class="valid-msg" data-ng-show="form.$submitted || form.firstName.$touched">
+          <div  data-ng-show="form.firstName.$error.required">Tell us your name.</div>
         </div>
       </div>
 
       <div class="sub-lastname">
         <label for="lastName">last name</label><br>
-        <input class="ngInput" type="text" ng-model="user.lastname" name="lastName" required="">
+        <input class="ngInput" type="text" data-ng-model="user.lastname" name="lastName" required="">
         <br>
-        <div class="valid-msg" ng-show="form.$submitted || form.lastName.$touched">
-          <div ng-show="form.lastName.$error.required">Tell us your last name.</div>
+        <div class="valid-msg" data-ng-show="form.$submitted || form.lastName.$touched">
+          <div data-ng-show="form.lastName.$error.required">Tell us your last name.</div>
         </div>
       </div>
 
       <div class="sub-email">
         <label for="subEmail">email</label><br>
-        <input class="ngInput" type="email" ng-model="user.email" name="subEmail" required="">
+        <input class="ngInput" type="email" data-ng-model="user.email" name="subEmail" required="">
         <br>
-        <div class="valid-msg" ng-show="form.$submitted || form.subEmail.$touched">
-          <span ng-show="form.subEmail.$error.required">Tell us your email.</span>
-          <span ng-show="form.subEmail.$error.email">This is not a valid email.</span>
+        <div class="valid-msg" data-ng-show="form.$submitted || form.subEmail.$touched">
+          <span data-ng-show="form.subEmail.$error.required">Tell us your email.</span>
+          <span data-ng-show="form.subEmail.$error.email">This is not a valid email.</span>
         </div>
       </div>
 
