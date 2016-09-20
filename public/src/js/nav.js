@@ -20,7 +20,7 @@
 
   // gnb navigation 영역 ScrollMagic 추가
   var ctrl = new ScrollMagic.Controller({
-    'addIndicators': false
+    'addIndicators': !false
   });
 
   var scroll_scene = new ScrollMagic.Scene({
@@ -35,14 +35,24 @@
 
   var gnb_scene = '.gnb-page01, .gnb-page02, .gnb-page03, .gnb-page04, .gnb-page05, .gnb-page06'.split(', ');
   var page_names = '.testimonials, .features, .projects, .pricing, .about-us, .contacts'.split(', ');
+
+  function getHeight(idx) {
+    return page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top; 
+  }
+
   gnb_scene.forEach(function (selector, idx) {
+    // console.log(getHeight(idx));
     var gnb_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
-          'duration': 
-            function () {
-               return  page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top;
-            } 
+          // 'duration': function() {
+          //   return getHeight(idx);
+          // }
+      })
+      .on('start', function () {
+        // console.log('start event' + idx);
+        // console.log(gnb_nav_scene, idx, getHeight(idx));
+         gnb_nav_scene.duration( getHeight(idx) );
       })
       .setClassToggle(selector, 'active')
       .addTo(ctrl);
@@ -74,11 +84,16 @@
   side_scene.forEach(function (selector, idx) {
     var side_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
-          'triggerHook': 0.5,
-          'duration': 
-            function () {
-               return  page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top;
-            } 
+          'triggerHook': 0.5
+          // 'duration': 
+          //   function () {
+          //      return  page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top;
+          //   } 
+      })
+      .on('start', function () {
+        // console.log('start event' + idx);
+        // console.log(gnb_nav_scene, idx, getHeight(idx));
+         side_nav_scene.duration( getHeight(idx) );
       })
       .setClassToggle(selector, 'active')
       .addTo(ctrl);

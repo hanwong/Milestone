@@ -18,14 +18,13 @@
     var $card = $('.element-item');
     
     $card.each(function(index, el) {
+      
       $card.eq(index).on('touchstart', function (e) {
         if ( !$card.eq(index).hasClass('hover') ) {
           $card.eq(index).addClass('hover');
-          // TweenMax.to($card.eq(index), 0.5, { 'transform': translateY(-3px), 'transform': rotateY( 180deg ) });
         } 
         else {
           $card.eq(index).removeClass('hover');
-          // TweenMax.to($card.eq(index), 0.5, { 'transform': rotateY( 180deg ) , 'transform': translateY( 0 )});
         }
 
       });
