@@ -36,7 +36,6 @@
       margin-bottom: 50px
     .features-items
       article
-        flex: initial
         [class*="-img"]
           transform: scale(0.85)
           height: 125px
@@ -46,6 +45,8 @@
   .features
     .features-items
       flex-direction: column
+      article
+        flex: initial
       [class*="-desc"]
         padding: 0
         margin-bottom: 20px

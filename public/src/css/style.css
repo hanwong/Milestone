@@ -840,11 +840,20 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   transition: all 0.5s linear;
 }
 
-.projects .element-item:hover {
+.projects .element-item.hover {
   transform: translateY(-3px);
 }
 
-.projects .element-item:hover .card {
+.projects .element-item.hover .card, .projects .element-item.hover .card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  animation: flip-in 1s forwards 0.5s;
+}
+
+.non-touch .projects .element-item:hover, .non-touch .projects .element-item:focus {
+  transform: translateY(-3px);
+}
+
+.non-touch .projects .element-item:hover .card, .non-touch .projects .element-item:focus .card {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   animation: flip-in 1s forwards 0.5s;
 }
@@ -863,6 +872,7 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
   border-radius: 13px;
@@ -892,6 +902,10 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   color: #000;
   background: #ac9455;
   transform: rotateY(180deg);
+}
+
+.projects .element-item .card .back .item-title, .projects .element-item .card .back .item-desc {
+  text-align: left;
 }
 
 .projects .element-item .card .back .item-title {
@@ -931,6 +945,15 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   color: #141414;
 }
 
+.projects .element-item .card .back .close-btn {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  color: #FFF;
+}
+
 .md .items-group {
   width: 730px;
 }
@@ -947,6 +970,10 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 .xs .projects .element-item .card .front img {
   width: auto;
   height: auto;
+}
+
+.xs .projects .element-item .card .back .close-btn {
+  display: block;
 }
 
 .features .features-title {
@@ -1010,10 +1037,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   margin-bottom: 50px;
 }
 
-.md .features .features-items article, .xs .features .features-items article {
-  flex: initial;
-}
-
 .md .features .features-items article [class*="-img"], .xs .features .features-items article [class*="-img"] {
   transform: scale(0.85);
   height: 125px;
@@ -1022,6 +1045,10 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 
 .xs .features .features-items {
   flex-direction: column;
+}
+
+.xs .features .features-items article {
+  flex: initial;
 }
 
 .xs .features .features-items [class*="-desc"] {
