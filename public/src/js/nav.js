@@ -27,8 +27,6 @@
       'triggerElement': '.home-carousel',
       'triggerHook': 0,
       'offset': -79
-      // 'duration': $(document).height()
-      // 'reverse': false
   })
   .setClassToggle('.gnb-nav', 'scrolled')
   .addTo(ctrl);
@@ -45,13 +43,8 @@
     var gnb_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
-          // 'duration': function() {
-          //   return getHeight(idx);
-          // }
       })
       .on('start', function () {
-        // console.log('start event' + idx);
-        // console.log(gnb_nav_scene, idx, getHeight(idx));
          gnb_nav_scene.duration( getHeight(idx) );
       })
       .setClassToggle(selector, 'active')
@@ -71,9 +64,7 @@
   var tm_off = new TweenMax.fromTo('.side-nav', 0.2, { 'opacity': 1 }, { 'opacity': 0 });
   var side_nav_scene = new ScrollMagic.Scene({
         'triggerElement': '.testimonials',
-        'triggerHook': 0.5,
-        // 'duration': $(document).height()
-        // 'reverse': false
+        'triggerHook': 0.5
     })
     .setClassToggle('.side-nav', 'fade-in')
     .addTo(ctrl)
@@ -85,14 +76,8 @@
     var side_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5
-          // 'duration': 
-          //   function () {
-          //      return  page_names[idx+1] ? $(`${page_names[idx+1]}`).offset().top - $(`${page_names[idx]}`).offset().top : $(document).height() - $(`${page_names[idx]}`).offset().top;
-          //   } 
       })
       .on('start', function () {
-        // console.log('start event' + idx);
-        // console.log(gnb_nav_scene, idx, getHeight(idx));
          side_nav_scene.duration( getHeight(idx) );
       })
       .setClassToggle(selector, 'active')
