@@ -840,6 +840,7 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   border-bottom: 1px solid transparent;
+  cursor: pointer;
 }
 
 .projects .btn-group button.active {
