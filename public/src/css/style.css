@@ -882,7 +882,7 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   border-radius: 13px;
 }
 
-.projects .element-item .card span {
+.projects .element-item .card .front, .projects .element-item .card .back {
   margin: 0;
   display: block;
   position: absolute;
@@ -891,6 +891,10 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   backface-visibility: hidden;
   overflow: hidden;
   border-radius: 13px;
+}
+
+.projects .element-item .card .front span, .projects .element-item .card .back span {
+  display: block;
 }
 
 .projects .element-item .card .front {
