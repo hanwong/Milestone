@@ -11,7 +11,7 @@
 
   .btn-group
     margin-bottom: 30px
-    button 
+    button
       margin-right: 30px
       padding-bottom: 10px
       font-family: $mont
@@ -26,7 +26,8 @@
         color: $black
         border-bottom: 1px solid $basic-color
         outline: none
-
+    button:last-child
+      margin-right: 0
   .items-group
     width: 980px
   .element-item 
@@ -93,9 +94,6 @@
           +link-btn( null, 10px 20px 10px, #fff, $black)
           width: 100px 
           border: 2px solid #fff
-      // &:hover
-      //   +animation(flip-in 2s forwards)
-
   
 .md
   .items-group
@@ -106,6 +104,7 @@
       width: 100%
     .element-item 
       width: 100%
+      margin-left: 0
       .card
         .front img
           width: auto

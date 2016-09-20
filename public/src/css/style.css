@@ -820,6 +820,10 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   outline: none;
 }
 
+.projects .btn-group button:last-child {
+  margin-right: 0;
+}
+
 .projects .items-group {
   width: 980px;
 }
@@ -937,6 +941,7 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 
 .xs .projects .element-item {
   width: 100%;
+  margin-left: 0;
 }
 
 .xs .projects .element-item .card .front img {
@@ -1671,6 +1676,11 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   margin-left: 25px;
   width: auto;
   max-height: 15px;
+}
+
+.xs .contacts .contacts-desc, .md .contacts .contacts-desc {
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .xs .contacts .contacts-info span, .md .contacts .contacts-info span {
