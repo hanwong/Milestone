@@ -1782,24 +1782,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   max-height: 15px;
 }
 
-footer {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  background: #141414;
-}
-
-footer .footer-title {
-  font-size: 10px;
-  color: #404040;
-}
-
 .xs .contacts .contacts-info span, .md .contacts .contacts-info span {
   font-size: 13px;
 }
@@ -1812,11 +1794,6 @@ footer .footer-title {
 .xs .contacts .contacts-form form [class*="contacts-"], .md .contacts .contacts-form form [class*="contacts-"] {
   flex: 1 0 100%;
   padding: 0;
-}
-
-.xs footer .footer-title, .md footer .footer-title {
-  font-size: 10px;
-  color: #404040;
 }
 
 .xs .contacts-info {
@@ -1832,6 +1809,28 @@ footer .footer-title {
 
 .xs .contacts-info .social-info :first-child img {
   margin-left: 0;
+}
+
+footer {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background: #141414;
+}
+
+footer .footer-title {
+  font-size: 10px;
+  color: #B3B3B3;
+}
+
+.xs footer .footer-title, .md footer .footer-title {
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=../css/maps/style.css.map */
