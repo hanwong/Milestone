@@ -100,18 +100,18 @@
       bottom: 30px
 
     .home-carousel
-      .mobile
-        img
-          width: 435px
-      .watch
+      width: 100vw
+      .mobile, .watch
         .item-img
-          padding-top: 51.51px
-          padding-bottom: 51.51px
-        img
-          width: 209px
-      .text-items
-        .item-name
-          text-align: center
+          flex: initial
+          width: 100vw
+          height: 50vh
+          img
+            width: 50vh
+      .mobile img
+        transform: scale(0.9)
+      .watch img
+        transform: scale(0.5)
 
 .md, .xs
   .home
@@ -122,6 +122,7 @@
           order: -1
         .text-items
           .item-name
+            text-align: center
             margin-bottom: 10px
           .item-description
             width: 80%

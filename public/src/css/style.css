@@ -60,10 +60,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 
 .testimonials, .features, .projects, .pricing, .about-us, .contacts, .home {
   position: relative;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -102,10 +98,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .gnb-nav {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -119,10 +111,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .gnb-nav div {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -240,6 +228,7 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .md .gnb-nav, .xs .gnb-nav {
+  width: 100vw;
   height: 104px;
   justify-content: space-between;
 }
@@ -303,10 +292,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .xs .gnb-nav.is-open .gnb-home {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -318,10 +303,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   flex-basis: 100%;
   padding-top: 10px;
   padding-bottom: 20px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -482,10 +463,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 
 .home .home-carousel li .item-img {
   flex: 1 0 50%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -495,10 +472,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .home .home-carousel li .text-items {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -526,10 +499,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 .home .home-carousel li .text-items .item-link {
   align-self: flex-start;
   flex: 0;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -579,28 +548,29 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   bottom: 30px;
 }
 
-.xs .home .home-carousel .mobile img {
-  width: 435px;
+.xs .home .home-carousel {
+  width: 100vw;
 }
 
-.xs .home .home-carousel .watch .item-img {
-  padding-top: 51.51px;
-  padding-bottom: 51.51px;
+.xs .home .home-carousel .mobile .item-img, .xs .home .home-carousel .watch .item-img {
+  flex: initial;
+  width: 100vw;
+  height: 50vh;
+}
+
+.xs .home .home-carousel .mobile .item-img img, .xs .home .home-carousel .watch .item-img img {
+  width: 50vh;
+}
+
+.xs .home .home-carousel .mobile img {
+  transform: scale(0.9);
 }
 
 .xs .home .home-carousel .watch img {
-  width: 209px;
-}
-
-.xs .home .home-carousel .text-items .item-name {
-  text-align: center;
+  transform: scale(0.5);
 }
 
 .md .home .home-carousel li.active, .xs .home .home-carousel li.active {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -612,6 +582,7 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .md .home .home-carousel li.active .text-items .item-name, .xs .home .home-carousel li.active .text-items .item-name {
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -934,10 +905,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .projects .element-item .card .back .item-link {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -998,10 +965,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .features .features-items {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1009,10 +972,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 
 .features .features-items article {
   flex: 1 0 33%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1023,10 +982,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .features .features-items article [class*="-img"] {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1048,6 +1003,10 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 
 .md .features .features-desc, .xs .features .features-desc {
   margin-bottom: 50px;
+}
+
+.md .features .features-items article, .xs .features .features-items article {
+  flex: initial;
 }
 
 .md .features .features-items article [class*="-img"], .xs .features .features-items article [class*="-img"] {
@@ -1086,10 +1045,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .pricing .pricing-items {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1097,10 +1052,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 
 .pricing .pricing-items article {
   flex: 1 0 33%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1109,10 +1060,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .pricing .pricing-items article [class*="-img"] {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1158,10 +1105,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .pricing .pricing-items article [class*="-link"] {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1196,6 +1139,10 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 
 .xs .pricing .pricing-items {
   flex-direction: column;
+}
+
+.xs .pricing .pricing-items article {
+  flex: initial;
 }
 
 .xs .pricing .pricing-items article [class*="-img"] {
@@ -1283,10 +1230,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 .about-us .insta-items {
   position: absolute;
   bottom: 0;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -1298,10 +1241,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .about-us .insta-items .insta-follow {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1329,10 +1268,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .about-us .insta-items .insta-follow .insta-link {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1367,10 +1302,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .xs .about-us .social-items [class*="item-"] .figure-wrapper {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -1410,10 +1341,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .subscribe {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1424,10 +1351,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .subscribe .subscribe-form {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1446,10 +1369,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .subscribe .subscribe-form .subscribe-link {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1471,10 +1390,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .subscribe .subscribe-form form {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1549,7 +1464,7 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .xs .subscribe .subscribe-img img {
-  width: 430px;
+  width: 100%;
 }
 
 .xs .subscribe .subscribe-form form [class*="sub-"] {
@@ -1578,10 +1493,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .contacts .contacts-form {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1590,10 +1501,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .contacts .contacts-form .contacts-link {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1619,10 +1526,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .contacts .contacts-form form {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1712,10 +1615,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .contacts-info {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1724,20 +1623,12 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .contacts-info .office-info {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 }
 
 .contacts-info .office-info .phone-number, .contacts-info .office-info .office-address, .contacts-info .office-info .mail-address {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1748,10 +1639,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 .contacts-info .office-info .phone-number .icon, .contacts-info .office-info .office-address .icon, .contacts-info .office-info .mail-address .icon {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1816,10 +1703,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 }
 
 footer {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
