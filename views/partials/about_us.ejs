@@ -79,7 +79,7 @@
 
       <div class="sub-firstname">
         <label for="firstName">name</label><br>
-        <input class="ngInput" type="text" data-ng-model="user.firstname" name="firstName" required="">
+        <input class="ngInput" type="text" data-ng-model="user.firstname" name="firstName" id="firstName" required="">
         <br>
         <div class="valid-msg" data-ng-show="form.$submitted || form.firstName.$touched">
           <div  data-ng-show="form.firstName.$error.required">Tell us your name.</div>
@@ -88,7 +88,7 @@
 
       <div class="sub-lastname">
         <label for="lastName">last name</label><br>
-        <input class="ngInput" type="text" data-ng-model="user.lastname" name="lastName" required="">
+        <input class="ngInput" type="text" data-ng-model="user.lastname" name="lastName" id="lastName" required="">
         <br>
         <div class="valid-msg" data-ng-show="form.$submitted || form.lastName.$touched">
           <div data-ng-show="form.lastName.$error.required">Tell us your last name.</div>
@@ -97,7 +97,7 @@
 
       <div class="sub-email">
         <label for="subEmail">email</label><br>
-        <input class="ngInput" type="email" data-ng-model="user.email" name="subEmail" required="">
+        <input class="ngInput" type="email" data-ng-model="user.email" name="subEmail" id="subEmail" required="">
         <br>
         <div class="valid-msg" data-ng-show="form.$submitted || form.subEmail.$touched">
           <span data-ng-show="form.subEmail.$error.required">Tell us your email.</span>

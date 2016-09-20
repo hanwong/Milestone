@@ -7,7 +7,7 @@
 
       <div class="contacts-userName">
         <label for="userName">name</label><br>
-        <input class="ngInput" type="text" data-ng-model="user.name" name="userName" required="">
+        <input class="ngInput" type="text" data-ng-model="user.name" name="userName" id="userName" required="">
         <br>
         <div class="valid-msg" data-ng-show="form.$submitted || form.userName.$touched">
           <div  data-ng-show="form.userName.$error.required">Tell us your name.</div>
@@ -16,7 +16,7 @@
 
       <div class="contacts-email">
         <label for="contactEmail">email</label><br>
-        <input class="ngInput" type="email" data-ng-model="user.email" name="contactEmail" required="">
+        <input class="ngInput" type="email" data-ng-model="user.email" name="contactEmail" id="contactEmail" required="">
         <br>
         <div class="valid-msg" data-ng-show="form.$submitted || form.contactEmail.$touched">
           <span data-ng-show="form.contactEmail.$error.required">Tell us your email.</span>
@@ -26,7 +26,7 @@
 
       <div class="contacts-msg">
         <label class="msg" for="contactMsg">message</label><br>
-        <textarea class="msg" data-ng-model="user.message" name="contactMsg" required=""></textarea>
+        <textarea class="msg" data-ng-model="user.message" name="contactMsg" id="contactMsg" required=""></textarea>
       </div>
     </form>
     <a class="contacts-link" href="#"><p>subscribe</p></a>
