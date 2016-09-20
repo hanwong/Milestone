@@ -20,7 +20,7 @@
 
   // gnb navigation 영역 ScrollMagic 추가
   var ctrl = new ScrollMagic.Controller({
-    'addIndicators': !false
+    'addIndicators': false
   });
 
   var scroll_scene = new ScrollMagic.Scene({
@@ -39,7 +39,6 @@
   }
 
   gnb_scene.forEach(function (selector, idx) {
-    // console.log(getHeight(idx));
     var gnb_nav_scene = new ScrollMagic.Scene({
           'triggerElement': `${page_names[idx]}`,
           'triggerHook': 0.5,
