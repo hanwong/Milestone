@@ -66,9 +66,9 @@ angular.module('ng-isotope', [])
                     var parent = elm.parent();
                     parent.find('.active').removeClass('active');
                     elm.addClass('active');
-                    var sortEvent = parent.attr('isotope-sort-event');
+                    var sortEvent = parent.attr('data-isotope-sort-event');
                     if (typeof sortEvent !== 'undefined') {
-                        scope.$broadcast(sortEvent, { sort: elm.attr('isotope-sort-by') });
+                        scope.$broadcast(sortEvent, { sort: elm.attr('data-isotope-sort-by') });
                     }
                 });
             }
@@ -82,19 +82,19 @@ angular.module('ng-isotope', [])
                 var elm = angular.element(element);
                 var elementType = elm.prop('tagName');
                 if (elementType == 'DIV') {
-                    elm.find('*[isotope-filter-by]').bind('click', function (i, e) {
+                    elm.find('*[data-isotope-filter-by]').bind('click', function (i, e) {
                         angular.element(this).parent().find('.active').removeClass('active');
                         angular.element(this).addClass('active');
 
-                        var filter = angular.element(this).attr('isotope-filter-by');
+                        var filter = angular.element(this).attr('data-isotope-filter-by');
                         var group = attrs.isotopeFilterGroup;
                         if (typeof group !== 'undefined') {
                             var filterArray = [];
 
-                            angular.element('body').find('*[isotope-filter-group=' + group + ']').each(function (i, e) {
-                                angular.element(e).find('*[isotope-filter-by]').each(function (i, e) {
+                            angular.element('body').find('*[data-isotope-filter-group=' + group + ']').each(function (i, e) {
+                                angular.element(e).find('*[data-isotope-filter-by]').each(function (i, e) {
                                     if (angular.element(e).hasClass('active')) {
-                                        var selectedFilter = angular.element(e).attr('isotope-filter-by');
+                                        var selectedFilter = angular.element(e).attr('data-isotope-filter-by');
                                         if (selectedFilter !== '*') {
                                             filterArray.push(selectedFilter);
                                         }
@@ -115,13 +115,13 @@ angular.module('ng-isotope', [])
 
                 if (elementType == 'SELECT') {
                     element.bind('change', function () {
-                        var filter = elm.find('option:selected').attr('isotope-filter-by');
+                        var filter = elm.find('option:selected').attr('data-isotope-filter-by');
                         var group = attrs.isotopeFilterGroup;
                         if (typeof group !== 'undefined') {
                             var filterArray = [];
 
-                            angular.element('body').find('*[isotope-filter-group=' + group + ']').each(function (i, e) {
-                                var selectedFilter = angular.element(e).find('option:selected').attr('isotope-filter-by');
+                            angular.element('body').find('*[data-isotope-filter-group=' + group + ']').each(function (i, e) {
+                                var selectedFilter = angular.element(e).find('option:selected').attr('data-isotope-filter-by');
                                 if (selectedFilter !== '*') {
                                     filterArray.push(selectedFilter);
                                 }

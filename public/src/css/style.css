@@ -33,19 +33,19 @@ h2 {
   text-align: center;
 }
 
-p[class*="description"], p[class*="desc"] {
+p[class*="description"], p[class*="desc"], span[class*="description"], span[class*="desc"] {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   color: #a3a3a3;
 }
 
-.md p[class*="description"], .xs p[class*="description"], .md p[class*="desc"], .xs p[class*="desc"] {
+.md p[class*="description"], .xs p[class*="description"], .md p[class*="desc"], .xs p[class*="desc"], .md span[class*="description"], .xs span[class*="description"], .md span[class*="desc"], .xs span[class*="desc"] {
   font-size: 13px;
   text-align: center;
 }
 
-p[class*="name"], p[class*="title"] {
+p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -53,7 +53,7 @@ p[class*="name"], p[class*="title"] {
   text-transform: uppercase;
 }
 
-.md p[class*="name"], .xs p[class*="name"], .md p[class*="title"], .xs p[class*="title"] {
+.md p[class*="name"], .xs p[class*="name"], .md p[class*="title"], .xs p[class*="title"], .md span[class*="name"], .xs span[class*="name"], .md span[class*="title"], .xs span[class*="title"] {
   font-size: 18px;
   text-align: center;
 }
@@ -61,6 +61,9 @@ p[class*="name"], p[class*="title"] {
 .testimonials, .features, .projects, .pricing, .about-us, .contacts, .home {
   position: relative;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -100,6 +103,9 @@ p[class*="name"], p[class*="title"] {
 
 .gnb-nav {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -114,6 +120,9 @@ p[class*="name"], p[class*="title"] {
 
 .gnb-nav div {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -295,6 +304,9 @@ p[class*="name"], p[class*="title"] {
 
 .xs .gnb-nav.is-open .gnb-home {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -307,6 +319,9 @@ p[class*="name"], p[class*="title"] {
   padding-top: 10px;
   padding-bottom: 20px;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -468,6 +483,9 @@ p[class*="name"], p[class*="title"] {
 .home .home-carousel li .item-img {
   flex: 1 0 50%;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -478,6 +496,9 @@ p[class*="name"], p[class*="title"] {
 
 .home .home-carousel li .text-items {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -506,6 +527,9 @@ p[class*="name"], p[class*="title"] {
   align-self: flex-start;
   flex: 0;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -574,6 +598,9 @@ p[class*="name"], p[class*="title"] {
 
 .md .home .home-carousel li.active, .xs .home .home-carousel li.active {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -903,6 +930,9 @@ p[class*="name"], p[class*="title"] {
 
 .projects .element-item .card .back .item-link {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -964,6 +994,9 @@ p[class*="name"], p[class*="title"] {
 
 .features .features-items {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -972,6 +1005,9 @@ p[class*="name"], p[class*="title"] {
 .features .features-items article {
   flex: 1 0 33%;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -983,6 +1019,9 @@ p[class*="name"], p[class*="title"] {
 
 .features .features-items article [class*="-img"] {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1043,6 +1082,9 @@ p[class*="name"], p[class*="title"] {
 
 .pricing .pricing-items {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1051,6 +1093,9 @@ p[class*="name"], p[class*="title"] {
 .pricing .pricing-items article {
   flex: 1 0 33%;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1060,6 +1105,9 @@ p[class*="name"], p[class*="title"] {
 
 .pricing .pricing-items article [class*="-img"] {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1106,6 +1154,9 @@ p[class*="name"], p[class*="title"] {
 
 .pricing .pricing-items article [class*="-link"] {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1228,6 +1279,9 @@ p[class*="name"], p[class*="title"] {
   position: absolute;
   bottom: 0;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -1240,6 +1294,9 @@ p[class*="name"], p[class*="title"] {
 
 .about-us .insta-items .insta-follow {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1268,6 +1325,9 @@ p[class*="name"], p[class*="title"] {
 
 .about-us .insta-items .insta-follow .insta-link {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1303,6 +1363,9 @@ p[class*="name"], p[class*="title"] {
 
 .xs .about-us .social-items [class*="item-"] .figure-wrapper {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -1343,6 +1406,9 @@ p[class*="name"], p[class*="title"] {
 
 .subscribe {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1354,6 +1420,9 @@ p[class*="name"], p[class*="title"] {
 
 .subscribe .subscribe-form {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1373,6 +1442,9 @@ p[class*="name"], p[class*="title"] {
 
 .subscribe .subscribe-form .subscribe-link {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1395,6 +1467,9 @@ p[class*="name"], p[class*="title"] {
 
 .subscribe .subscribe-form form {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1499,6 +1574,9 @@ p[class*="name"], p[class*="title"] {
 
 .contacts .contacts-form {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1508,6 +1586,9 @@ p[class*="name"], p[class*="title"] {
 
 .contacts .contacts-form .contacts-link {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1534,6 +1615,9 @@ p[class*="name"], p[class*="title"] {
 
 .contacts .contacts-form form {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1624,6 +1708,9 @@ p[class*="name"], p[class*="title"] {
 
 .contacts-info {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1633,6 +1720,9 @@ p[class*="name"], p[class*="title"] {
 
 .contacts-info .office-info {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1640,6 +1730,9 @@ p[class*="name"], p[class*="title"] {
 
 .contacts-info .office-info .phone-number, .contacts-info .office-info .office-address, .contacts-info .office-info .mail-address {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1651,6 +1744,9 @@ p[class*="name"], p[class*="title"] {
 
 .contacts-info .office-info .phone-number .icon, .contacts-info .office-info .office-address .icon, .contacts-info .office-info .mail-address .icon {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1687,6 +1783,9 @@ p[class*="name"], p[class*="title"] {
 
 footer {
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;

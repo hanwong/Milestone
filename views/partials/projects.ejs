@@ -2,16 +2,16 @@
   <h2 class="projects-title">OUR WORKS</h2>
   <p class="projects-desc">A hundred thousand grateful loves to your dear papa and mamma.</p>
   
-  <div class="btn-group" isotope-filter isotope-filter-event="filter-elements" >
-    <button isotope-filter-by="*" class="btn btn-default active">all</button>
-    <button isotope-filter-by=".app" class="btn btn-default">app</button>
-    <button isotope-filter-by=".branding" class="btn btn-default">branding</button>
-    <button isotope-filter-by=".web" class="btn btn-default">web</button>
+  <div class="btn-group" data-isotope-filter data-isotope-filter-event="filter-elements" >
+    <button data-isotope-filter-by="*" class="btn btn-default active">all</button>
+    <button data-isotope-filter-by=".app" class="btn btn-default">app</button>
+    <button data-isotope-filter-by=".branding" class="btn btn-default">branding</button>
+    <button data-isotope-filter-by=".web" class="btn btn-default">web</button>
   </div>
-  <div class="items-group" isotope-grid="list.contents" isotope-filter-event="filter-elements" isotope-reload-event="reload-elements" >
+  <div class="items-group" data-isotope-grid="list.contents" data-isotope-filter-event="filter-elements" data-isotope-reload-event="reload-elements" >
     <div class="{{item.category}} element-item" data-ng-repeat="item in list.contents">
-      <article class="card">
-      <!-- <h1 aria-hidden="true">{{item.name}} card</h1> -->
+      <article class="card" aria-label="item card">
+      <!-- <h1 aria-hidden="true">{{item.name}} </h1> -->
         <span class="front">
           <img data-ng-src="{{item.img}}" alt="{{item.name}}">
         </span>
