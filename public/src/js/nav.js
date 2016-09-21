@@ -65,6 +65,13 @@
         'triggerElement': '.testimonials',
         'triggerHook': 0.5
     })
+    .on('start', function () {
+         var scroll_direction = ctrl.info("scrollDirection");
+         // console.log(scroll_direction);
+         if ( scroll_direction === 'REVERSE') {
+            viewUpdate('#');
+         }
+    })
     .setClassToggle('.side-nav', 'fade-in')
     .addTo(ctrl)
     .setTween(tm_on);
@@ -78,6 +85,18 @@
       })
       .on('start', function () {
          side_nav_scene.duration( getHeight(idx) );
+         var scroll_direction = ctrl.info("scrollDirection");
+         if ( scroll_direction === 'FORWARD') {
+            viewUpdate(idx);
+         }
+      })
+      .on('end', function () {
+         // console.log('end..............', page_names[idx]);
+         var scroll_direction = ctrl.info("scrollDirection");
+         // console.log(scroll_direction);
+         if ( scroll_direction === 'REVERSE') {
+            viewUpdate(idx);
+         }
       })
       .setClassToggle(selector, 'active')
       .addTo(ctrl);

@@ -86,17 +86,18 @@
     if ( typeof(index) === 'number' ) {
       // console.log(index);
       page = '#' + views[index];
-      xhr.open('GET', page);
-      xhr.send();
+      // xhr.open('GET', page);
+      // xhr.send();
     }
     else {
       // console.log(index);
       page = '#';
-      xhr.open('GET', page);
-      xhr.send(); 
+      // xhr.open('GET', page);
+      // xhr.send(); 
     }
     // 페이지의 주소(해쉬) 값을 변경
-    global.location.hash = page;
+    // global.location.hash.replace(page);
+    history.pushState(null, null, page);
 
     // 웹 브라우저가 수행하는 브라우저의 기본 동작 차단
     return false;
