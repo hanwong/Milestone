@@ -388,6 +388,86 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
   display: none;
 }
 
+.md .home {
+  padding-bottom: 120px;
+}
+
+.md .home .home-carousel .mobile img {
+  width: 500px;
+}
+
+.md .home .home-carousel .watch .item-img {
+  padding-top: 16.63px;
+  padding-bottom: 16.63px;
+}
+
+.md .home .home-carousel .watch img {
+  width: 306px;
+}
+
+.xs .home {
+  padding-bottom: 80px;
+}
+
+.xs .home .indicator {
+  bottom: 30px;
+}
+
+.xs .home .home-carousel {
+  width: 100vw;
+}
+
+.xs .home .home-carousel .mobile .item-img, .xs .home .home-carousel .watch .item-img {
+  flex: initial;
+  width: 100vw;
+  height: 50vh;
+}
+
+.xs .home .home-carousel .mobile .item-img img, .xs .home .home-carousel .watch .item-img img {
+  width: 50vh;
+}
+
+.xs .home .home-carousel .mobile img {
+  transform: scale(0.9);
+}
+
+.xs .home .home-carousel .watch img {
+  transform: scale(0.5);
+}
+
+.md .home .home-carousel li.active, .xs .home .home-carousel li.active {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.md .home .home-carousel li.active .item-img, .xs .home .home-carousel li.active .item-img {
+  order: -1;
+}
+
+.md .home .home-carousel li.active .text-items .item-name, .xs .home .home-carousel li.active .text-items .item-name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.md .home .home-carousel li.active .text-items .item-description, .xs .home .home-carousel li.active .text-items .item-description {
+  width: 80%;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.md .home .home-carousel li.active .text-items .item-link, .xs .home .home-carousel li.active .text-items .item-link {
+  align-self: center;
+  font-size: 10px;
+  padding: 10px 22px 9px;
+  border-radius: 30px;
+}
+
+.md .home .home-carousel li.active .text-items .item-link .apple, .xs .home .home-carousel li.active .text-items .item-link .apple {
+  font-size: 20px;
+}
+
 .home .arrow-btns button {
   position: absolute;
   top: 50%;
@@ -521,86 +601,6 @@ p[class*="name"], p[class*="title"], span[class*="name"], span[class*="title"] {
 .home .home-carousel li .text-items .item-link .apple {
   font-size: 22px;
   margin-right: 10px;
-}
-
-.md .home {
-  padding-bottom: 120px;
-}
-
-.md .home .home-carousel .mobile img {
-  width: 500px;
-}
-
-.md .home .home-carousel .watch .item-img {
-  padding-top: 16.63px;
-  padding-bottom: 16.63px;
-}
-
-.md .home .home-carousel .watch img {
-  width: 306px;
-}
-
-.xs .home {
-  padding-bottom: 80px;
-}
-
-.xs .home .indicator {
-  bottom: 30px;
-}
-
-.xs .home .home-carousel {
-  width: 100vw;
-}
-
-.xs .home .home-carousel .mobile .item-img, .xs .home .home-carousel .watch .item-img {
-  flex: initial;
-  width: 100vw;
-  height: 50vh;
-}
-
-.xs .home .home-carousel .mobile .item-img img, .xs .home .home-carousel .watch .item-img img {
-  width: 50vh;
-}
-
-.xs .home .home-carousel .mobile img {
-  transform: scale(0.9);
-}
-
-.xs .home .home-carousel .watch img {
-  transform: scale(0.5);
-}
-
-.md .home .home-carousel li.active, .xs .home .home-carousel li.active {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.md .home .home-carousel li.active .item-img, .xs .home .home-carousel li.active .item-img {
-  order: -1;
-}
-
-.md .home .home-carousel li.active .text-items .item-name, .xs .home .home-carousel li.active .text-items .item-name {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.md .home .home-carousel li.active .text-items .item-description, .xs .home .home-carousel li.active .text-items .item-description {
-  width: 80%;
-  line-height: 1.7;
-  text-align: center;
-}
-
-.md .home .home-carousel li.active .text-items .item-link, .xs .home .home-carousel li.active .text-items .item-link {
-  align-self: center;
-  font-size: 10px;
-  padding: 10px 22px 9px;
-  border-radius: 30px;
-}
-
-.md .home .home-carousel li.active .text-items .item-link .apple, .xs .home .home-carousel li.active .text-items .item-link .apple {
-  font-size: 20px;
 }
 
 .testimonials .testimonials-title {

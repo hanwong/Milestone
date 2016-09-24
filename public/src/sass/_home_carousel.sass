@@ -1,3 +1,62 @@
+
+.md
+  .home
+    padding-bottom: 120px
+    .home-carousel
+      .mobile
+        img
+          width: 500px
+      .watch
+        .item-img
+          padding-top: 16.63px
+          padding-bottom: 16.63px
+        img
+          width: 306px
+
+.xs
+  .home
+    padding-bottom: 80px
+    .indicator
+      bottom: 30px
+
+    .home-carousel
+      width: 100vw
+      .mobile, .watch
+        .item-img
+          flex: initial
+          width: 100vw
+          height: 50vh
+          img
+            width: 50vh
+      .mobile img
+        transform: scale(0.9)
+      .watch img
+        transform: scale(0.5)
+
+.md, .xs
+  .home
+    .home-carousel
+      li.active
+        +flex-align-center(both, column wrap)
+        .item-img
+          order: -1
+        .text-items
+          .item-name
+            text-align: center
+            margin-bottom: 10px
+          .item-description
+            width: 80%
+            line-height: 1.7
+            text-align: center
+          .item-link
+            align-self: center
+            font-size: 10px
+            padding: 10px 22px 9px
+            border-radius: 30px
+            .apple
+              font-size: 20px
+
+
 .home
   .arrow-btns button
     position: absolute
@@ -78,60 +137,3 @@
           .apple
             font-size: 22px
             margin-right: 10px
-
-.md
-  .home
-    padding-bottom: 120px
-    .home-carousel
-      .mobile
-        img
-          width: 500px
-      .watch
-        .item-img
-          padding-top: 16.63px
-          padding-bottom: 16.63px
-        img
-          width: 306px
-
-.xs
-  .home
-    padding-bottom: 80px
-    .indicator
-      bottom: 30px
-
-    .home-carousel
-      width: 100vw
-      .mobile, .watch
-        .item-img
-          flex: initial
-          width: 100vw
-          height: 50vh
-          img
-            width: 50vh
-      .mobile img
-        transform: scale(0.9)
-      .watch img
-        transform: scale(0.5)
-
-.md, .xs
-  .home
-    .home-carousel
-      li.active
-        +flex-align-center(both, column wrap)
-        .item-img
-          order: -1
-        .text-items
-          .item-name
-            text-align: center
-            margin-bottom: 10px
-          .item-description
-            width: 80%
-            line-height: 1.7
-            text-align: center
-          .item-link
-            align-self: center
-            font-size: 10px
-            padding: 10px 22px 9px
-            border-radius: 30px
-            .apple
-              font-size: 20px
